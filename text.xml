@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <note>
+      <loader>
+        <subheading>How to Use this Tour</subheading>
+         <greyLeftTop>For information, click a hotspot on the product.</greyLeftTop>
+         <greyLeftBottom>Or choose a numbered feature button</greyLeftBottom>
+         <greyRightTop>To explore the product in 3D, use these mouse controls.</greyRightTop>
+         <greyRightBottom>Or use the 3D controls below.</greyRightBottom>
+         <loaderOpen>Open</loaderOpen>
+         <loaderZoom>Zoom</loaderZoom>
+         <loaderRotate>Rotate</loaderRotate>
+         <loaderMove>move</loaderMove> 
+         <leftMouse>Left mouse : </leftMouse>
+         <rotateMouse>rotate</rotateMouse>
+         <scrollMouse>Scroll mouse : </scrollMouse>
+         <zoomMouse>Zoom</zoomMouse>
+         <bothMouse>Right mouse : </bothMouse>
+         <pan>Pan</pan>
+      </loader>
+   	<message>
+
+        <onloadCopy>
+            <point1text1>
+            <![CDATA[ Lenovo ThinkSystem SR665 V3 is the optimum 2U, two-socket server. The SR665 V3 has the performance and flexibility to manage a complex set of workloads like data management, analytics, virtualization, cloud, and AI. The two 4th Gen AMD EPYC™ processors and the latest DDR5 memory maximize the performance of this 2U server.          
+            ]]>
+          </point1text1>
+        </onloadCopy>
+        
+
+      </message>
+
+         <point2text>
+         
+         <point2text1>
+             <![CDATA[ Up to 8 x 2.5” drives (shown) Up to 4 x 3.5” drives (model dependent)
+             ]]>
+         </point2text1>
+					 
+         <point2text2>
+             <![CDATA[ USB 3.0 
+             ]]>
+         </point2text2>
+					 
+         <point2text3>
+             <![CDATA[ XClarity Controller USB 
+             ]]>
+         </point2text3>
+					 
+         <point2text4>
+             <![CDATA[ Power button/status LED
+             ]]>
+         </point2text4>
+					 
+         <point2text5>
+             <![CDATA[ System ID LED 
+             ]]>
+         </point2text5>
+					 
+         <point2text6>
+             <![CDATA[ System error LED
+             ]]>
+         </point2text6>
+					 
+         <point2text7>
+             <![CDATA[ Network activity LED
+             ]]>
+         </point2text7>
+          
+        <point2text8>
+             <![CDATA[ Optional VGA connector
+             ]]>
+         </point2text8>
+
+        <point2text9>
+           <![CDATA[ 
+             ]]>
+         </point2text9>
+        
+      </point2text>
+
+       
+<point3text>
+          <headingText>
+             <![CDATA[FRONT VIEW
+             ]]>
+         </headingText>
+         <point3text1>
+             <![CDATA[ Front VGA Connector (Optional)
+             ]]>
+         </point3text1>
+         <point3text2>
+             <![CDATA[ (model dependent) <br> for U.2 drive or SAS drive or SATA drives
+             ]]>
+         </point3text2>
+         <point3text3>
+             <![CDATA[ Operator panel with optional Diagnostic LCD Panel
+             ]]>
+         </point3text3>
+         <point3text4>
+             <![CDATA[ USB port
+             ]]>
+         </point3text4>
+         <point3text5>
+             <![CDATA[ XCC management port
+             ]]>
+         </point3text5>
+         <point3text6>
+             <![CDATA[ Pull-out information tab with XCC Network Access Label
+             ]]>
+         </point3text6>
+</point3text>   
+		 
+		 
+      <point4text>
+         <point4heading>
+             <![CDATA[ Optional Diagnostic Panel
+             ]]>
+         </point4heading>
+       
+         <point4text1>
+             <![CDATA[ Network LED
+             ]]>
+         </point4text1>
+         <point4text2>
+            <![CDATA[ ID Button/ LED
+            ]]>
+         </point4text2>
+          <point4text3>
+            <![CDATA[ System error LED
+            ]]>
+         </point4text3>
+          <point4text4>
+            <![CDATA[ Power button/ LED 
+            ]]>
+         </point4text4>
+          <point4text5>
+            <![CDATA[ 2-line System Status Panel utilizes both front-facing LEDs and a pop-out LCD panel to provide VPD, IP,  environmental and system error information.
+            ]]>
+         </point4text5>       
+          
+    </point4text>
+		 
+ <point5text>
+         <point5heading>
+             <![CDATA[ CONFIGURATIONS
+             ]]>
+         </point5heading>
+         <point5text1>
+             <![CDATA[ The ThinkSystem SR850  supports up to 2 backplanes, each supporting up to 8x 2.5” drives.The AnyBay backplane supports four SAS/SATA and four AnyBay slots each for SAS/SATA/NVMe drives.
+             ]]>
+         </point5text1>
+         <point5text2>
+             <![CDATA[  (8) 2.5” SATA/SAS 
+             ]]>
+         </point5text2>
+         <point5text3>
+             <![CDATA[ (4) 2.5” SATA/SAS + (4) 2.5” AnyBay
+             ]]>
+         </point5text3>
+         <point5text4>
+             <![CDATA[ (16) 2.5” SATA/SAS
+             ]]>
+         </point5text4>
+         <point5text5>
+             <![CDATA[ (12) 2.5” SATA/SAS + (4) 2.5” AnyBay
+             ]]>
+         </point5text5>
+         <point5text6>
+             <![CDATA[ (8) 2.5” SATA/SAS + (8) 2.5” AnyBay
+             ]]>
+	     </point5text6> 
+</point5text>
+
+     <pointtext6>
+         <point6text1>
+            <![CDATA[  12x 3.5" chassis    
+            ]]>
+         </point6text1>
+         <point6text2>
+            <![CDATA[ Hot-swap fans
+            ]]>
+         </point6text2>
+          <point6text3>
+            <![CDATA[16x memory DIMMs
+            ]]>
+         </point6text3>
+          <point6text4>
+            <![CDATA[ CPU  
+            ]]>
+         </point6text4>
+          <point6text5>
+            <![CDATA[  Up to 8x PCIe slots
+            ]]>
+         </point6text5>
+          <point6text6>
+            <![CDATA[Internal PCIe slot
+            ]]>
+         </point6text6>
+          <point6text7>
+            <![CDATA[Side by Side M.2 boot module
+            ]]>
+         </point6text7>
+          <point6text8>
+            <![CDATA[Rear-accessible OCP 3.0
+            ]]>
+         </point6text8>
+            <point6text9>
+        <![CDATA[The SR650 V2 can accommodate up to 3 double-width GPUs or up to 8 single-wide GPUs (shown).
+
+        ]]>    
+        </point6text9> 
+      </pointtext6>
+       
+       
+       <point7text>
+        <point7headingText>
+             <![CDATA[Interior – 2 Processor, 24 DIMM
+             ]]>
+         </point7headingText>
+        <point7text1>            
+            <![CDATA[ Supports 2 or 4 second generation <br> Intel<sup>®</sup> Xeon<sup>®</sup> Processor Scalable Family CPUs.
+            ]]>
+        </point7text1>   
+        <point7text2>            
+            <![CDATA[ 6x fans (N+1)
+            ]]>
+        </point7text2>
+        <point7text3>            
+            <![CDATA[ Intel Processor #2
+            ]]>
+        </point7text3>
+        <point7text4>            
+            <![CDATA[ Mezz connectors
+            ]]>
+        </point7text4>
+        <point7text5>            
+            <![CDATA[ Battery cell 
+            ]]>
+        </point7text5>
+        <point7text6>            
+            <![CDATA[ PCIe riser card
+            ]]>
+        </point7text6>
+        <point7text7>            
+            <![CDATA[PCH
+            ]]>
+        </point7text7>
+        <point7text8>            
+            <![CDATA[Intel Processor #1
+            ]]>
+        </point7text8>
+        <point7text9>            
+            <![CDATA[Built on Redfish-compliant APIs
+            ]]>
+        </point7text9>
+      </point7text>
+       
+      
+     <point8text>
+         <point8text1>
+              <![CDATA[ External Diagnostics Port   
+              ]]>
+         </point8text1>
+         <point8text2>
+             <![CDATA[Optional VGA port
+
+             ]]>
+         </point8text2>
+         <point8text3>
+             <![CDATA[ Pull-out information tag
+
+             ]]>
+         </point8text3>
+         <point8text4>
+             <![CDATA[ USB 3.1 Gen 1 port
+
+             ]]>
+         </point8text4>
+         <point8text5>
+             <![CDATA[Operator panel
+             ]]>
+         </point8text5>.
+         
+          <point8text6>
+            <![CDATA[ Maximum 2.5" drive configuration: 32x 2.5" SAS/SATA/NVMe 24(F)+8(M)+4(R): 
+                      **up to 32 drives due to SGPIO limitation
+             ]]>
+          </point8text6>
+           <point8text7>
+            <![CDATA[UP to 24x 2.5-inch drives (SAS/SATA, NVMe or AnyBay)]]>
+         </point8text7>
+          
+       </point8text>
+       
+    <point9text>
+         <point9headingText>
+             <![CDATA[  
+             ]]>
+         </point9headingText>
+         <point9text1>
+             <![CDATA[ This expansion tray has a unique camming mechanism that requires very little effort to single-handedly install or remove.  The toolless, self-guiding design provides superior reliability, usability, and serviceability.
+             ]]>
+         </point9text1>
+    </point9text>
+       
+
+     <point10text>
+        <headingText>
+             <![CDATA[
+             ]]>
+         </headingText>
+        <point10text1>            
+            <![CDATA[Lenovo XClarity is foundation software for data centers who put a premium on IT efficiency and precision execution.
+            ]]>
+        </point10text1>
+        <point10text2>            
+            <![CDATA[Lenovo XClarity Administrator™
+            ]]>
+        </point10text2>
+        <point10text3>            
+            <![CDATA[Lenovo XClarity Orchestrator
+            ]]>
+        </point10text3>
+        <point10text4>            
+            <![CDATA[Lenovo XClarity Integrator
+            ]]>
+        </point10text4>
+        <point10text5>            
+            <![CDATA[Lenovo XClarity Controller
+            ]]>
+        </point10text5>
+        <point10text6>            
+            <![CDATA[Centralized resource-management solution: Reduces complexity, speeds response, and enhances availability of Lenovo ThinkSystem and ThinkAgile solutions.
+            ]]>
+        </point10text6>
+        <point10text7>            
+            <![CDATA[Provides centralized monitoring, management, and analytics for environments with large number of devices. It leverages existing XClarity Administrator's across multiple sites to view  overall health, collect device inventory and health summaries, drill down into device details, view  event and audit logs, and apply updates to managed resources.
+            ]]>
+        </point10text7>
+        <point10text8>            
+            <![CDATA[Enables integration into existing IT applications: software plugins provide functionality to manage infrastructure in the console of the software tools that are currrently in use.
+            ]]>
+        </point10text8>
+        <point10text9>            
+            <![CDATA[Embedded provisioning tool that allows quick and easy configuration of server hardware & deployment of operating system.
+            ]]>
+        </point10text9>
+        <point10text10>            
+            <![CDATA[Lenovo XClarity Provisioning Manager
+            ]]>
+        </point10text10>
+        <point10text11>            
+            <![CDATA[Embedded management engine in ThinkSystem server. Designed to standardize, simplify and automate foundation server management tasks.
+            ]]>
+        </point10text11>
+      </point10text>  
+    <point11text>
+        <point11text1>
+            <![CDATA[ The  SR665  V3 features  one  or two 4th Generation  AMD EPYC™ Processors with  high core counts and PCIe  lane  counts per  socket providing  extreme  configuration  flexibility and  the ultimate in processing  power  needed  for  enterprise-class  performance.
+              ]]>
+        </point11text1>
+      </point11text>
+  <point111text>
+        <point111text1>
+          <![CDATA[ 
+               ThinkSystem SR650 V3 supports up to two 4ᵗʰ Gen Intel® Xeon® Scalable processors and the latest
+               Intel® Optane memory for the speed and power necessary to tackel modern enterprise workloads.    ]]>
+        </point111text1>
+      </point111text>
+
+	  <point12text>
+<!--
+         <point12text1>
+              <![CDATA[ 
+              ]]>
+         </point12text1>
+-->
+         <point12text1>
+             <![CDATA[ The unique design of this server accommodates a mid-chassis drive cage for up to 4x 3.5-inch. hot-swap drives.
+             ]]>
+         </point12text1>
+      </point12text> 
+       
+        <point13text>
+          <point13text1>
+            <![CDATA[ "Simplify your IT transformation and grow your business your way"
+            <span>In today's world,  change can happen  overnight.  Lenovo's Solution  Services Group  offers a complete suite of answers to even your  most  challenging business questions.</span>
+            ]]>
+         </point13text1>
+         <point13text2>
+            <![CDATA[ Solution Services
+            ]]>
+         </point13text2>
+         <point13text3>
+            <![CDATA[ Implementation Services
+            ]]>
+         </point13text3>
+          <point13text4>
+            <![CDATA[ Support Services
+            ]]>
+          </point13text4>
+         <point13text7>
+            <![CDATA[ Lenovo TruScale Infrastructure Services
+            ]]>
+          </point13text7>
+          
+          <point13text6>
+            <![CDATA[ Our proven experts guide you on your digital transformation and help you reach your unique strategic and business goals through:
+            ]]>
+         </point13text6>
+         <point13text11>
+            <![CDATA[ Accelerate time to productivity to focus on your customers and growing business.
+            ]]>
+         </point13text11>
+<!--
+         <point11text12>
+            <![CDATA[ TruScale Infrastructure Services
+            ]]>
+         </point11text12>
+-->
+         <point13_li1_1>
+            <![CDATA[ Workshops
+            ]]>
+         </point13_li1_1>
+         <point13_li1_2>
+            <![CDATA[ Assessments
+            ]]>
+         </point13_li1_2> 
+		  <point13_li1_3>
+            <![CDATA[Designs
+            ]]>
+         </point13_li1_3> 
+         <point13_li1_4>
+            <![CDATA[Asset Recovery
+            ]]>
+         </point13_li1_4>
+          
+         <point13_li2_1>
+            <![CDATA[ Hardware Installation
+            ]]>
+         </point13_li2_1>
+         <point13_li2_2>
+            <![CDATA[Deployment
+            ]]>
+         </point13_li2_2> 
+		  <point13_li2_3>
+			 <![CDATA[Migration and Expansion
+             ]]>
+		  </point13_li2_3>
+          <point13_li2_4>
+             <![CDATA[Factory Integration
+             ]]>
+          </point13_li2_4>
+
+         <point13_li3_1>
+            <![CDATA[ Premier Support
+            ]]>
+         </point13_li3_1>
+         <point13_li3_2>
+            <![CDATA[ Managed Services
+            ]]>
+         </point13_li3_2>  
+         <point13_li3_3>
+            <![CDATA[ Preconfigured Support
+            ]]>
+         </point13_li3_3> 
+		   
+		  <point13_li3_4>
+            <![CDATA[ Technical Account Management
+            ]]>
+         </point13_li3_4>  
+         <point13_li3_5>
+            <![CDATA[Health Check Services
+            ]]>
+         </point13_li3_5> 
+      
+         <point13_li4_1>
+            <![CDATA[ The Pay-For-What-You-Use Data Center
+            ]]>
+         </point13_li4_1>
+         <point13_li4_2>
+            <![CDATA[ Hardware Environments Tailored To Your Specific Business Needs
+            ]]>
+         </point13_li4_2>
+      </point13text>
+	   
+
+<point15text>
+         <point15text1>
+            <![CDATA[ 
+                 The SR650 V3 can accommodate up to 3 double-width GPUs or up to 8 single-wide GPUs (shown).
+            ]]>
+         </point15text1>
+</point15text>
+<point16text>
+         <point16text1>
+            <![CDATA[ For some configurations such as the 16x 2.5-inch model shown can be configured with an integrated pull-out LCD diagnostics panel for active alerts and system status.
+            ]]>
+         </point16text1>
+        
+</point16text>
+
+<point17text>
+        <point17text1>
+          <![CDATA[ The performance heatsinks are designed to provide improved thermal management by drawing heat away from the processors to auxiliary radiators.
+          ]]>
+        </point17text1>
+      </point17text>
+<point18text>
+        <point18text1>
+          <![CDATA[ All configurations have a special port to connect an External Diagnostics Handset with an LCD display.]]>
+        </point18text1>
+      </point18text>
+       <point19text>
+        <point19text1>
+          <![CDATA[ All configurations have a special port to connect an External Diagnostics Handset with an LCD display.]]>
+        </point19text1>
+      </point19text>
+        <point20text>
+        <point20text1>
+          <![CDATA[ All configurations have a special port to connect an External Diagnostics Handset with an LCD display.]]>
+        </point20text1>
+      </point20text>
+
+	     <point21text>
+        <point21text1>
+          <![CDATA[External Diagnostics Handset]]>
+        </point21text1>
+        <point21text01>
+          <![CDATA[The server offers a dedicated port to connect to an optional External Diagnostics Handset with an LCD display for a variety of system status functions.]]>
+        </point21text01>
+        <point21text2>
+          <![CDATA[XCIarity Mobile]]>
+        </point21text2>
+        <point21text02>
+          <![CDATA[XClarity Mobile is available as an app for Android and iOS devices for single-server management functions, including:]]>
+        </point21text02>
+        <point21text3>
+          <![CDATA[Monitor audit events, alerts, and jobs]]>
+        </point21text3>
+        <point21text4>
+          <![CDATA[Trigger the collection of diagnostic data. Download service logs]]>
+        </point21text4>
+        <point21text5>
+          <![CDATA[View and change the IPv4 and IPv6 settings]]>
+        </point21text5>
+        <point21text6>
+          <![CDATA[Specify boot order and one-time boot settings]]>
+        </point21text6>
+        <point21text7>
+          <![CDATA[Power the server on or off, restart the server, or trigger NMI]]>
+        </point21text7>
+    </point21text>   
+      <buttons>
+         <backText>BACK</backText>
+         <!--<openCloseDiv>OPEN</openCloseDiv>-->
+         <zoomText>ZOOM</zoomText>
+         <roatateText>ROTATE</roatateText>
+         <moveText>MOVE</moveText>
+         <divOpen>Open</divOpen>
+         <divClose>Close</divClose>
+      </buttons>
+   </note>

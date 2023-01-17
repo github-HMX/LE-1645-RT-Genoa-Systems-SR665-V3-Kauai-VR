@@ -1,0 +1,113 @@
+{
+    "displaylayers": [ "3.5_Inch_drive_internal_Card", "3.5_Inch_drive_on/off", "3.5_MB", "Back_HDD_Panel", "CPO_on_off", "Front_Panel_HHD", "GPU_Card", "GP_ON_OFF", "HDD_NVME_4x2_on/off", "Internal_ON/OFF", "Internals_remain_parts", "NVME_2.5_3.5_inch", "NVME_on/off", "REF_New", "REF_ON_OFF", "Remote_Only_off/on", "Remote_with_Cable_ON/OFF", "Server_HIDE/SHOW_", "TOP_CAP", "TOP_MESH_FIX", "Top_Cover_on/off", "UntitledGroup66", "UntitledGroup67", "UntitledGroup68", "UntitledGroup69", "UntitledGroup70", "UntitledGroup72", "UntitledGroup77", "Wire_Hide/Show" ],
+    "positions": {
+        "Render_Cam_F01_BT": {
+            "doffocusdist": 5.000000,
+            "fovy": 28.072487,
+            "pos": [ 3.018524, 0.552429, 2.698253, -8.151566, 162.569397, 0.061520 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F01_F": {
+            "doffocusdist": 5.000000,
+            "fovy": 20.407948,
+            "pos": [ -0.000022, 0.017453, 0.031479, 1.874183, 198.070084 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F01_FL": {
+            "doffocusdist": 5.000000,
+            "fovy": 26.991467,
+            "pos": [ 0.934409, 0.123904, 1.482773, -0.553350, 211.937775, 0.008808 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F01_FT": {
+            "doffocusdist": 5.000000,
+            "fovy": 23.913168,
+            "pos": [ 0.797599, 0.560241, 0.594566, -1.917419, 235.362457 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F01_Rear": {
+            "doffocusdist": 5.000000,
+            "fovy": 20.407948,
+            "pos": [ 3.141643, 0.036657, 0.861349, -0.170294, 183.056564 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F01_TR": {
+            "doffocusdist": 5.000000,
+            "fovy": 26.991467,
+            "pos": [ 5.270786, 0.998327, -3.297081, -8.103045, 234.387650 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F20_ID_Panel": {
+            "doffocusdist": 5.000000,
+            "fovy": 22.619865,
+            "pos": [ 0.210558, 0.141996, 1.674458, 3.050304, 122.560760, 0.004231 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F20_ID_Remote": {
+            "doffocusdist": 5.000000,
+            "fovy": 22.619865,
+            "pos": [ 0.322048, 0.408165, -5.366199, 1.852406, 91.049515, 0.121125 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F20_Internal": {
+            "doffocusdist": 5.000000,
+            "fovy": 25.360767,
+            "pos": [ -0.675694, 0.483434, -0.003334, -2.257717, 206.146652, 0.008990 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "Render_Cam_F20_Top": {
+            "doffocusdist": 5.000000,
+            "fovy": 20.407948,
+            "pos": [ 3.141593, 1.413448, -4.002882, 9.145678, 169.170670, -3.141593 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 1000
+        },
+        "hmxBack": {
+            "fovy": 26.990999,
+            "pos": [ 3.141594, -0.000014, 0.000000, 0.000000, 481.677155 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 0
+        },
+        "hmxFront": {
+            "fovy": 26.990999,
+            "pos": [ 0.000007, 0.000009, 0.000000, 0.000000, 481.677155 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 0
+        },
+        "hmxHero": {
+            "fovy": 26.990999,
+            "pos": [ 7.217634, 0.123908, 1.482658, -0.553484, 211.938370, 0.008805 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 0
+        },
+        "hmxLeft": {
+            "fovy": 26.990999,
+            "pos": [ 4.712382, 0.000037, 0.000000, 0.000000, 481.677155 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 0
+        },
+        "hmxRight": {
+            "fovy": 26.990999,
+            "pos": [ 1.570798, -0.000038, 0.000000, 0.000000, 481.677155 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 0
+        },
+        "hmxTop": {
+            "fovy": 26.990999,
+            "pos": [ 3.141593, 1.539380, 0.000000, 0.000000, 481.677155 ],
+            "target": [ 0.0, 0.0, 0.0 ],
+            "time": 0
+        }
+    },
+    "states": [ "3.5_INCH_CARD_OFF", "3.5_INCH_CARD_ON", "3.5_Inch_drive_off", "3.5_Inch_drive_on", "3.5_Inch_drive_on_", "3.5_inch_drive_of_old", "MB_OFF", "MB_ON", "3.5_inch_Drive_Configuation", "GPU_Rich_Configuration", "Storage_Rich_Configuation", "Cpo_off", "Cpo_on", "Front_Panel_A_Horizontal_HDD", "Front_Panel_B_Vertical_HDD", "Front_Panel_C_Net_HDD", "GPU_Card_OFF", "GPU_Card_ON", "GP_OFF", "GP_ON", "HDD_NVME_4x2_off", "HDD_NVME_4x2_on", "Internal_off", "Internal_on", "2.5_inch", "3.5_inch", "NVME_2.5_3.5_OFF", "NVME_off", "NVME_on", "REF_HORIZONTAL", "REF_VERTICAL", "REF_OFF", "REF_ON", "Remote_only_off", "Remote_only_on", "Remote_with_Cable_OFF", "Remote_with_Cable_ON", "Server_hide_new", "Server_show_new", "CAP_OFF", "CAP_ON", "TOP_MESH_FIX_HIDE", "TOP_MESH_FIX_SHOW", "Top_Cover_OFF", "Top_Cover_ON", "UntitledGroup70", "Wire_Hide", "Wire_show" ],
+    "ver": "v2.0.547"
+}

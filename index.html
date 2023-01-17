@@ -1,0 +1,881 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+
+<head>
+    <title>ThinkSystem SR665 V3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no">
+    <script type="text/javascript" src="js/browserDetect.js"></script>
+    <script type="text/javascript" src="js/InfinityRT_Navigation.js"></script>
+    <script type="text/javascript" src="js/RT_Navigation_Extension.js"></script>
+    <script type="text/javascript" src="js/ui.js"></script>
+    <script type="text/javascript" src="js/SSE.js"></script>
+    <script type="text/javascript" src="js/ctm.js"></script>
+    <script type="text/javascript" src="js/lzma.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/gl_script.js"></script>
+    <script type="text/javascript" src="js/sb.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <link type="text/css" href="css/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+    <link href="css/sb.css" rel="stylesheet" type="text/css">
+    <link href="css/liteaccordion.css" rel="stylesheet" type="text/css">
+    <style>
+        .ui-state-default,
+        .ui-widget-content .ui-state-default,
+        .ui-widget-header .ui-state-default {
+            color: white;
+            /*         opacity: 0.7;*/
+            font-size: 14px;
+            cursor: pointer;
+            display: block;
+            background: #5a5a5c;
+            font-family: 'Gotham-Book';
+        }
+
+        .ui-accordion .ui-accordion-icons {
+            padding-top: 20px;
+            padding-bottom: 0px;
+            padding-left: 41px;
+            text-align: left;
+            height: 45px;
+            border: 1px solid #AEADAB;
+            cursor: pointer !important;
+        }
+
+        .ui-accordion .ui-accordion-icons {
+            border: none;
+            border-top: 1px solid #c0c0c0 !important;
+        }
+
+        .ui-widget-content {
+            border: 1px solid #dfdfe4;
+            background-color: #dfdfe4;
+            color: #333333;
+        }
+
+        .menuitemsBase {
+            width: 190px;
+            height: 39px;
+            /*background-color: black;*/
+            color: white;
+            /*opacity: 0.7; */
+            border-top: 0px solid #c0c0c0;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: #eb140a;
+        }
+
+        .active {
+            background-color: #eb140a;
+            opacity: 1;
+            border-top: 1px solid #c0c0c0;
+        }
+
+        .menuitems:hover,
+        .menuitems1:hover {
+            background-color: #eb140a;
+            opacity: 1;
+        }
+
+        .menuitemsBase:hover {
+            background-color: #eb140a;
+            opacity: 1;
+        }
+
+        #rightSideController .menuitems:hover {
+            background-color: #dfdfe4;
+            opacity: 1;
+        }
+
+        #panel {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="superblaze" style="z-index:2;position:absolute">
+        <div id="loader">
+            <image src="./images_gl/loaderblock.jpg" />
+        </div>
+
+        <div id="transPatch2"
+            style="width:1080px;height:1920px;position:absolute;z-index:3030;background-color: transperent; opacity:1;">
+
+        </div>
+        <div id="transPatch5" style="width:1080px;height:1920px;position:absolute;z-index:1;">
+        </div>
+        <div id="transPatchDiv" style="width:1080px;height:1920px;position:absolute;z-index:1;">
+        </div>
+
+        <div id="firstSlideheadWrapper">
+            <div id="cpHeading" class="cptextWrapper">ThinkSystem SR665 V3</div>
+        </div>
+
+        <div id="onloadCopy" style="text-align:center;line-height:36px;">
+            <p class="point1text1"></p>
+            <p id="point1image2" class="bodyText"><img width="100%" src=""></p>
+        </div>
+
+        <div id="Header_Plate"></div>
+        <div class="noselect productName"><img style="width: 270px" src="images_gl/ThinkSystem_Logo.svg" /><span> SR665 V3 </span></div>
+
+        <div id="scenediv">
+            <div id="firstSlideWrapper"></div>
+
+
+            <div id="ButtonController">
+                <div id="accordion1" class="accordion"
+                    style="   left:0px;bottom:67px;padding:0;position:absolute;width:362px;z-index:2; ">
+                    <h3 id="menu2" class="menuitems"><span class="menuText">Overview</span></h3>
+                    <div></div>
+                    <h3 id="menu7" class="menuitems"><span class="menuText">3.5-inch Drive Configuration</span></h3>
+                    <div>
+                        <div id="rightSideController">
+                            <div id="menu13" class="menuitems animPlayBtns1">
+                                <div class="greyOutBox redOutBox"></div>
+                                <span>Front View</span>
+                            </div>
+                        </div>
+                        <div id="rightSideController">
+                            <div id="menu9" class="menuitems animPlayBtns1">
+                                <div class="greyOutBox redOutBox"></div>
+                                <span>Interior View</span>
+                            </div>
+                        </div>
+                        <div id="rightSideController">
+                            <div id="menu8" class="menuitems animPlayBtns1">
+                                <div class="greyOutBox redOutBox"></div>
+                                <span>Rear View</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 id="menu6" class="menuitems"><span class="menuText">Diagnostic Displays</span></h3>
+                    <div>
+                        <div id="rightSideController">
+                            <div id="menu16" class="menuitems animPlayBtns1">
+                                <div class="greyOutBox redOutBox"></div>
+                                <span>External Diagnostics LCD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="accordion2" class="accordion"
+                    style="left:363px;bottom:1px;padding:0;position:absolute;width:362px;z-index:2;">
+                    <h3 id="menu12" class="menuitems"><span class="menuText">CPUs</span></h3>
+                    <div>
+                        <div id="rightSideController">
+                            <div id="menu20" class="menuitems animPlayBtns1">
+                                <div class="greyOutBox redOutBox"></div>
+                                <span>Performance Heatsinks</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 id="menu5" class="menuitems"><span class="menuText">GPU-Rich Configuration</span></h3>
+                    <div></div>
+
+                    <h3 id="menu10" class="menuitems"><span class="menuText">Management</span></h3>
+                    <div>
+
+                        <div id="rightSideController">
+                            <div id="menu21" class="menuitems animPlayBtns1">
+                                <div class="greyOutBox redOutBox"></div>
+                                <span>Local Management</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 id="menu99" disabled=""><span></span></h3>
+                    <div></div>
+                </div>
+
+                <div id="accordion3" class="accordion"
+                    style="left:726px;bottom:1px;padding:0;position:absolute;width:362px;z-index:2;">
+                    <h3 id="menu3" class="menuitems"><span class="menuText">2.5-inch Drive Configuration</span></h3>
+                    <div>
+                        <div id="rightSideController">
+                            <div id="menu4" class="menuitems animPlayBtns1">
+                                <div class="greyOutBox redOutBox"></div>
+                                <span>Front View</span>
+                            </div>
+                            <div id="menu14" class="menuitems animPlayBtns1">
+                                <div class="greyOutBox redOutBox"></div>
+                                <span>Interior View</span>
+                            </div>
+                            <div id="menu18" class="menuitems animPlayBtns1">
+                                <div class="greyOutBox redOutBox"></div>
+                                <span>Rear view</span>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <h3 id="menu17" class="menuitems"><span class="menuText">PCIe Slot-Rich Configuration</span></h3>
+                    <div></div>
+
+                    <h3 id="menu11" class="menuitems"><span class="menuText">Services</span></h3>
+                    <div></div>
+
+                    <h3 id="menu99" disabled=""><span></span></h3>
+                    <div></div>
+                </div>
+
+                <div id="back_Button">
+                </div>
+                <div class="autoplay_btn menuitems1 playAll" id="autoPlays"><span id="pauseplayImg"><img
+                            style="width:40px;height:40px;" src="./images_gl/Play.svg" /></span><span
+                        id="pauseplayImg2"><img style="width:40px;height:40px;" src="" /></span>
+                </div>
+            </div>
+
+
+            <div id="lenovo_logo" style="display:block"><img style="width:62px;" src="./images_gl/Lenovo.svg"></div>
+            <div id="pointtext1" class="transbox noselect pointcontent2" style="display: none;">
+
+                <div id="Cp_text_01"></div>
+                <div id="Cp_text_02"></div>
+                <ul id="list_X" class="Cp_textul" style="opacity: 1;padding:6px">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div id="Cp_text_03"></div>
+                <div id="Cp_text_04"></div>
+                <div id="Cp_text_05"></div>
+                <div id="Cp_text_06"></div>
+                <div id="networkSet">
+                    <div id="Cp_text_07"></div>
+                    <div id="Cp_text_08"></div>
+                    <div id="Cp_text_09"></div>
+                </div>
+                <div id="Cp_text_10" class="cpNodetext"></div>
+                <div id="Cp_text_11" class="cpNodetext"></div>
+                <div id="Cp_text_12" class="cpNodetext"></div>
+            </div>
+
+            <div id="point2text" class="transbox noselect" style="display:none;">
+
+            </div>
+
+
+            <div id="point3text" class="" style="display: none;">
+
+                <div id="hotspot1" class="cur" style="display: block;">
+                    <p id="hot1"></p>
+                    <img id="hotspot1plus" class="plus" src="">&nbsp;
+                </div>
+
+                <div id="hotspot2" class="cur" style="display: block;">
+                    <p id="hot2"></p>
+                    <img id="hotspot2plus" class="plus" src="">&nbsp;
+                    <img id="hotspot2plus1" class="plus" src="">&nbsp;
+                </div>
+
+
+                <div id="hotspot3" class="cur" style="display: block;">
+                    <p id="hot3"></p>
+                    <img id="hotspot3plus" class="plus" src="">&nbsp;
+                </div>
+
+                <div id="hotspot4" class="cur" style="display: block;">
+                    <p id="hot4"></p>
+                    <img id="hotspot4plus" class="plus" src="">&nbsp;
+                </div>
+
+                <div id="hotspot6" class="cur" style="display: block;">
+                    <p id="hot6"></p>
+                    <img id="hotspot6plus" class="plus" src="">&nbsp;
+                </div>
+
+
+            </div>
+
+
+            <div id="point4text" class="" style="display: none;">
+
+
+                <div id="hotspot13" class="cur" style="display: block;">
+                    <p id="hot13">CPU#2</p>
+                    <img id="hotspot13plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot14" class="cur" style="display: block;">
+                    <p id="hot14">3.5-inch drive bays</p>
+                    <img id="hotspot14plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot15" class="cur" style="display: block;">
+                    <p id="hot15">6x hot-swap fans</p>
+                    <img id="hotspot15plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot16" class="cur" style="display: block;">
+                    <p id="hot16">CPU#1</p>
+                    <img id="hotspot16plus" class="plus" src="">&nbsp;
+                </div>
+
+                <div id="hotspot114" class="cur" style="display: block;">
+                    <p id="hot114"></p>
+                    <img id="hotspot114plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot155" class="cur" style="display: block;">
+                    <p id="hot155">USB 2.0 port with XCC management</p>
+                    <img id="hotspot155plus" class="plus" src="">&nbsp;
+                </div>
+            </div>
+
+
+            <div id="point5text" class="transbox noselect">
+                <p class="point5text1 bodyText"></p>
+                <p class="point5text2 bodyText"></p>
+                <p class="point5text3 bodyText"></p>
+                <p class="point5text4 bodyText"></p>
+                <p class="point5text5 bodyText"></p>
+                <p class="point5text6 bodyText"></p>
+
+                <p id="point5image1" class="bodyText"><img width="600px" src=""></p>
+                <p id="point5image2" class="bodyText"><img width="600px" src=""></p>
+                <p id="point5image3" class="bodyText"><img width="600px" src=""></p>
+                <p id="point5image4" class="bodyText"><img width="600px" src=""></p>
+                <p id="point5image5" class="bodyText"><img width="600px" src=""></p>
+                <p id="point5image6" class="bodyText"><img width="190px" src=""></p>
+            </div>
+
+            <div id="point6text" style="display: none; top: 40px; left: 30px;">
+
+                <div id="hotspot12" class="cur" style="display: block;">
+                    <p id="hot12"></p>
+                    <img id="hotspot12plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot13" class="cur" style="display: block;">
+                    <p id="hot13"></p>
+                    <img id="hotspot13plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot14" class="cur" style="display: block;">
+                    <p id="hot14"></p>
+                    <img id="hotspot14plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot15" class="cur" style="display: block;">
+                    <p id="hot15"></p>
+                    <img id="hotspot15plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot16" class="cur" style="display: block;">
+                    <p id="hot16"></p>
+                    <img id="hotspot16plus" class="plus" src="">&nbsp;
+                </div>
+
+                <div id="hotspot22" class="cur" style="display: block;">
+                    <p id="hot22"></p>
+                    <img id="hotspot22plus" class="plus" src="">&nbsp;
+                </div>
+
+            </div>
+
+            <div id="point7Div" style="display:none;">
+                <p class="point7text1"></p>
+                <div id="hotspot1" class="cur" style="display: block;">
+                    <p id="hot1" class="hotspot">Optional VGA port</p>
+                    <img id="hotspot1plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot2" class="cur" style="display: block;">
+                    <p id="hot2" class="hotspot">External Diagnostics Port</p>
+                    <img id="hotspot2plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot3" class="cur" style="display: block;">
+                    <p id="hot3" class="hotspot">12x 3.5-inch drives (SAS/SATA or AnyBay)</p>
+                    <img id="hotspot3plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot4" class="cur" style="display: block;">
+                    <p id="hot4" class="hotspot">Operator panel</p>
+                    <img id="hotspot4plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot4040" class="cur" style="display: block;">
+                    <p id="hot4040" class="hotspot">USB 2.0 port with XCC management</p>
+                    <img id="hotspot4040plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot5050" class="cur" style="display: block;">
+                    <p id="hot5050" class="hotspot">USB 3.1 Gen 1 port</p>
+                    <img id="hotspot5050plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot6060" class="cur" style="display: block;">
+                    <p id="hot6060" class="hotspot">Pull-out information tag</p>
+                    <img id="hotspot6060plus" class="plus" src="">&nbsp;
+                </div>
+            </div>
+
+
+            <div id="point7text" class="transbox noselect">
+
+                <p class="point7text1 bodyText"></p>
+
+                <div id="hotspot23" class="cur" style="display: block;">
+                    <p id="hot23"></p>
+                    <img id="hotspot23plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot24" class="cur" style="display: block;">
+                    <p id="hot24"></p>
+                    <img id="hotspot24plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot25" class="cur" style="display: block;">
+                    <p id="hot25"></p>
+                    <img id="hotspot25plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot26" class="cur" style="display: block;">
+                    <p id="hot26"></p>
+                    <img id="hotspot26plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot27" class="cur" style="display: block;">
+                    <p id="hot27"></p>
+                    <img id="hotspot27plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot28" class="cur" style="display: block;">
+                    <p id="hot28"></p>
+                    <img id="hotspot28plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot29" class="cur" style="display: block;">
+                    <p id="hot29"></p>
+                    <img id="hotspot29plus" class="plus" src="">&nbsp;
+                </div>
+                <p id="point7image1" class="bodyText"><img width="90px" src=""></p>
+
+            </div>
+
+
+            <div id="point8text" style="display:none;">
+                <p class="point8text1 bodyText"></p>
+
+                <div id="hotspot17" class="cur" style="display: block;">
+                    <p id="hot17" class="hotspot">OCP 3.0 slot</p>
+                    <img id="hotspot17plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot18" class="cur" style="display: block;">
+                    <p id="hot18" class="hotspot">XCC Management port</p>
+                    <img id="hotspot18plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot19" class="cur" style="display: block;">
+                    <p id="hot19" class="hotspot">2x USB 3.1 G1 ports</p>
+                    <img id="hotspot19plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot20" class="cur" style="display: block;">
+                    <p id="hot20" class="hotspot">Video port</p>
+                    <img id="hotspot20plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot21" class="cur" style="display: block;">
+                    <p id="hot21" class="hotspot">USB 3.1 G1 port</p>
+                    <img id="hotspot21plus" class="plus" src="">&nbsp;
+                </div>
+
+                <div id="hotspot211" class="cur" style="display: block;">
+                    <p id="hot211" class="hotspot">NMI</p>
+                    <img id="hotspot211plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot212" class="cur" style="display: block;">
+                    <p id="hot212" class="hotspot">2x hot-swap power supplies</p>
+                    <img id="hotspot212plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot213" class="cur" style="display: block;">
+                    <p id="hot213" class="hotspot">2x hot-swap power supplies</p>
+                    <img id="hotspot213plus" class="plus" src="">&nbsp;
+                    <img id="hotspot213plus1" class="plus1" src="">&nbsp;
+                </div>
+                <div id="hotspot214" class="cur" style="display: block;">
+                    <p id="hot214" class="hotspot">2x or 4x 3.5-inch drives</p>
+                    <img id="hotspot214plus" class="plus" src="">&nbsp;
+                </div>
+            </div>
+
+
+            <div id="point9text" style="display:none;">
+                <p class="point9headingText"
+                    style="position:absolute;left: 505px;top:87px;width: 530px;font-size: 29px;"></p>
+                <div id="point9text1"></div>
+
+            </div>
+            <div id="point10text" class="noselect pointcontent">
+                <p class="point10headingText"
+                    style="position:absolute;left: 495px;top:92px;width: 580px;font-size: 29px;"></p>
+                <p class="point10text1 bodyText"></p>
+                <ul class="point10text7 bodyText" style="list-style-type: none;">
+                    <li class="thirteen"></li>
+                    <li class="fourteen"></li>
+                    <li class="fifteen"></li>
+                    <li class="sixteen"></li>
+                    <li class="seventeen"></li>
+                </ul>
+                <div class="point10textimg">
+                    <img width="150px" src='images_gl/management/m1.svg'>
+                </div>
+                <div class="point10textimg2">
+                    <img width="150px" src='images_gl/management/m2.svg'>
+                </div>
+                <div class="point10textimg3">
+                    <img width="150px" src='images_gl/management/m3.svg'>
+                </div>
+                <div class="point10textimg4">
+                    <img width="150px" src='images_gl/management/m4.svg'>
+                </div>
+                <div class="point10textimg5">
+                    <img width="150px" src='images_gl/management/m5.svg'>
+                </div>
+                <p id="point10image1" class="bodyText"><img src="" style="width:201px;"></p>
+
+
+            </div>
+
+            <div id="point11text" class="noselect pointcontent" style="display:none;">
+                <div id="point11text1"></div>
+                <div class="point11textimg">
+                    <img style="position: absolute;top: 985px;width: 191px;left: 162px;" src='./images_gl/intel.svg'>
+                </div>
+            </div>
+            <div id="point111text" class="noselect pointcontent" style="display:none;">
+                <div id="point111text1"></div>
+                <div class="point111textimg">
+                    <img style="position: absolute;top: 985px;width: 191px;left: 162px;" src='./images_gl/intel.svg'>
+                </div>
+            </div>
+
+            <div id="point15text" class="noselect pointcontent" style="display:none;">
+                <div id="point15text1"></div>
+                <div id="hotspot5" class="cur" style="display: block;">
+                    <p id="hot5">1x double-width GPU or 3x single-width GPUs</p>
+                    <img id="hotspot5plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot6" class="cur" style="display: block;">
+                    <p id="hot6">1x double-width GPU or 3x single-width GPUs</p>
+                    <img id="hotspot6plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot7" class="cur" style="display: block;">
+                    <p id="hot7">1x double-width GPU or 2x single-width GPUs</p>
+                    <img id="hotspot7plus" class="plus" src="">&nbsp;
+                </div>
+
+            </div>
+            <div id="point16text" class="noselect pointcontent" style="display:none;">
+                <div id="point16text1"></div>
+
+            </div>
+            <div id="point20text" class="noselect pointcontent" style="display:none;">
+                <div id="point20text1"></div>
+
+            </div>
+
+            <div id="point17text" class="noselect pointcontent" style="display:none;">
+                <div id="point17text1"></div>
+            </div>
+
+            <div id="point18text" style="display:none;">
+                <div id="point18text1"></div>
+                <div id="hotspot34" class="cur" style="display: block;">
+                    <p id="hot34">OCP 3.0 slot</p>
+                    <img id="hotspot34plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot35" class="cur" style="display: block;">
+                    <p id="hot35">XCC Management port</p>
+                    <img id="hotspot35plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot36" class="cur" style="display: block;">
+                    <p id="hot36">2x USB 3.1 G1 ports</p>
+                    <img id="hotspot36plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot37" class="cur" style="display: block;">
+                    <p id="hot37">Video port</p>
+                    <img id="hotspot37plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot38" class="cur" style="display: block;">
+                    <p id="hot38">USB 3.1 G1 port</p>
+                    <img id="hotspot38plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot39" class="cur" style="display: block;">
+                    <p id="hot39">NMI</p>
+                    <img id="hotspot39plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot40" class="cur" style="display: block;">
+                    <p id="hot40">8x 2.5-inch hot-swap drives (2x 7mm and additional PCIe slot options also available)
+                    </p>
+                    <img id="hotspot40plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot41" class="cur" style="display: block;">
+                    <img id="hotspot41plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot42" class="cur" style="display: block;">
+                    <p id="hot42">2x Hot-swap power supply</p>
+                    <img id="hotspot42plus" class="plus" src="">&nbsp;
+                </div>
+
+            </div>
+
+            <div id="point12text" style="display:none;">
+                <div id="point12text1"></div>
+                <div id="hotspot8" class="cur" style="display: block;">
+                    <p id="hot8">CPU#2</p>
+                    <img id="hotspot8plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot9" class="cur" style="display: block;">
+                    <p id="hot9">3.5-inch drive bays</p>
+                    <img id="hotspot9plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot10" class="cur" style="display: block;">
+                    <p id="hot10">6x hot-swap fans</p>
+                    <img id="hotspot10plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot11" class="cur" style="display: block;">
+                    <p id="hot11">CPU#1</p>
+                    <img id="hotspot11plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot111" class="cur" style="display: block;">
+                    <p id="hot111">Mid-chassis drive cage</p>
+                    <img id="hotspot111plus" class="plus" src="">&nbsp;
+                </div>
+            </div>
+            <div id="point13text" class="noselect pointcontent" style="display:none;z-index:20">
+
+                <div id="point13text1" style="display:none;"></div>
+                <div id="point13text1SubContent" class="point13text1SubContents">
+                    <h3>Technology Areas</h3>
+                    <ul>
+                        <li><span>Hybrid Cloud</span></li>
+                        <li><span>Data & Analytics</span></li>
+                        <li><span>HPC Data Center</span></li>
+                        <li><span>Cooling</span></li>
+                        <li><span>Virtualization & VDI</span></li>
+                    </ul>
+                </div>
+                <img src="./images_gl/Services2/small.png" alt="" class="point13textmainimg" />
+
+                <div class="learnmore anim" style="position: absolute;left: 815px;top: 992px; width: 220px;">
+                    <a href="#" style="margin-right: 3px;font-weight: bold;font-size: 36px;">Learn More</a>
+                    <p id="qrcodeimg" class="learnmore anim" style="margin-top: 0px;"><img width="220px"
+                            src="./images_gl/Services2/qrcode.png"></p>
+                </div>
+
+                <div id="point13text2" class="point13click">
+                    <img src="./images_gl/Services2/1.svg" alt="" />
+                </div>
+                <div id="point13textContent1" class="point13textContent">
+                    <h3>Discover</h3>
+                    <ul>
+                        <li><span>Workshop</span></li>
+                        <li><span>Assessment</span></li>
+                    </ul>
+                    <p>Lenovo experts set up an interactive, informative workshop session to review your primary goals
+                        and objectives.</p>
+                </div>
+                <div id="point13text3" class="point13click">
+                    <img src="./images_gl/Services2/2.svg" alt="" />
+                </div>
+                <div id="point13textContent2" class="point13textContent">
+                    <h3>Design</h3>
+                    <ul>
+                        <li><span>Solution Architecture</span></li>
+                        <li><span>Capacity Planning</span></li>
+                        <li><span>Best practices</span></li>
+                    </ul>
+                    <p>Our team will collaborate with you to design the best solution for your needs.</p>
+                </div>
+                <div id="point13text4" class="point13click">
+                    <img src="./images_gl/Services2/3.svg" alt="" />
+                </div>
+                <div id="point13textContent3" class="point13textContent">
+                    <h3>Implement</h3>
+                    <ul>
+                        <li><span>Hardware Installation</span></li>
+                        <li><span>Migration</span></li>
+                        <li><span>Deployment</span></li>
+                    </ul>
+                    <p>Once your full solution is architected, ordered, and ready for deployment, we can manage any
+                        aspects of hardware installation, data migration and system deployment.</p>
+                </div>
+                <div id="point13text5" class="point13click">
+                    <img src="./images_gl/Services2/4.svg" alt="" />
+                </div>
+                <div id="point13textContent4" class="point13textContent">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><span>Warranty Upgrade/ Extension</span></li>
+                        <li><span>Premier Support</span></li>
+                        <li><span>Technical Account Manager</span></li>
+                        <li><span>Enterprise Server Software</span></li>
+                    </ul>
+                    <p>Get the support you need through our warranty upgrade or extension offerings, and a single point
+                        of contact service with Premier Support.</p>
+                </div>
+                <div id="point13text6" class="point13click">
+                    <img src="./images_gl/Services2/5.svg" alt="" />
+                </div>
+                <div id="point13textContent5" class="point13textContent">
+                    <h3>Optimize</h3>
+                    <ul>
+                        <li><span>Managed Services</span></li>
+                        <li><span>Firmware/ Best Recipe Update</span></li>
+                        <li><span>Preventative Maintenance</span></li>
+                        <li><span>Health Check</span></li>
+                    </ul>
+                    <p>Access a range of Lenovo services to ensure maximum system performance.</p>
+                </div>
+                <div id="point13text7" class="point13click">
+                    <img src="./images_gl/Services2/6.svg" alt="" />
+                </div>
+                <div id="point13textContent6" class="point13textContent">
+                    <h3>Retire</h3>
+                    <ul>
+                        <li><span>Hard Deinstallation</span></li>
+                        <li><span>Asset Recovery</span>
+                            <ul style="margin-top: 10px;margin-left: 15px;">
+                                <li><span>Recycling/ Disposal</span></li>
+                                <li><span>Data Sanitization</span></li>
+                                <li><span>Drive Destruction</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>When your equipment reaches its end of life, Asset Recovery Services helps you meet
+                        sustainability goals and provides potential monetary value via a trade-in program.</p>
+                </div>
+                <div id="point13text8" class="point13click">
+                    <span>TruScale<br /> infrastructure<br /> Services</span>
+                </div>
+                <div id="point13textContent7" class="point13textContent">
+                    <h3>Lenovo TruScale: Unpacking the benefits of everything-as-a-service</h3>
+                    <p>Lenovo TruScale, a portfolio-spanning everything-as-a-service offering, is part of Lenovo&#8217;s
+                        continuing transformation for the next reality.</p>
+                </div>
+
+            </div>
+
+            <div id="point19text" style="display:none;">
+                <div id="hotspot1" class="cur" style="display: block;">
+                    <p id="hot1" class="hotspot">Optional VGA port</p>
+                    <img id="hotspot1plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot2" class="cur" style="display: block;">
+                    <p id="hot2" class="hotspot">External Diagnostics Port</p>
+                    <img id="hotspot2plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot3" class="cur" style="display: block;">
+                    <p id="hot3" class="hotspot">UP to 24x 2.5-inch drives (SAS/SATA, NVMe or AnyBay)</p>
+                    <img id="hotspot3plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot4" class="cur" style="display: block;">
+                    <p id="hot4" class="hotspot">Operator panel</p>
+                    <img id="hotspot4plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot4040" class="cur" style="display: block;">
+                    <p id="hot4040" class="hotspot">USB 2.0 port with XCC management</p>
+                    <img id="hotspot4040plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot5050" class="cur" style="display: block;">
+                    <p id="hot5050" class="hotspot">USB 3.1 Gen 1 port</p>
+                    <img id="hotspot5050plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot6060" class="cur" style="display: block;">
+                    <p id="hot6060" class="hotspot">Pull-out information tag</p>
+                    <img id="hotspot6060plus" class="plus" src="">&nbsp;
+                </div>
+            </div>
+
+
+            <div id="point14text" style="display:none;">
+
+                <div id="hotspot311" class="cur" style="display: block;">
+                    <p id="hot311" class="hotspot">Internal RAID adapter (cabled)</p>
+                    <img id="hotspot311plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot312" class="cur" style="display: block;">
+                    <p id="hot312" class="hotspot">5-6x hot-swap fans</p>
+                    <img id="hotspot312plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot313" class="cur" style="display: block;">
+                    <p id="hot313" class="hotspot">Performance heatsink</p>
+                    <img id="hotspot313plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot314" class="cur" style="display: block;">
+                    <p id="hot314" class="hotspot">CPU 2 + 16 DIMMs</p>
+                    <img id="hotspot314plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot315" class="cur" style="display: block;">
+                    <p id="hot315" class="hotspot">Riser 3 for slots 7 & 8 (cabled riser)</p>
+                    <img id="hotspot315plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot316" class="cur" style="display: block;">
+                    <p id="hot316" class="hotspot">2x hot-swap power supplies (under Riser 3)</p>
+                    <img id="hotspot316plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot317" class="cur" style="display: block;">
+                    <p id="hot317" class="hotspot">SAS Expander (cabled)</p>
+                    <img id="hotspot317plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot318" class="cur" style="display: block;">
+                    <p id="hot318" class="hotspot">M.2 module (mounted on mid drive cage)</p>
+                    <div class="hotspot318Div"></div>
+                    <!-- <img id="hotspot318plus" class="plus" src="">&nbsp; -->
+                </div>
+                <div id="hotspot319" class="cur" style="display: block;">
+                    <p id="hot319" class="hotspot">CPU 1 + 16 DIMMs</p>
+                    <img id="hotspot319plus" class="plus" src="">&nbsp;
+                </div>
+                <div id="hotspot320" class="cur" style="display: block;">
+                    <p id="hot320" class="hotspot">Riser 1 for slots 1-3</p>
+                    <img id="hotspot320plus" class="plus" src="">&nbsp;
+                </div>
+                <!--
+				<div id="hotspot321" class="cur" style="display: block;">
+					<p id="hot321" class="hotspot">Riser 2 for slots 4-6</p>
+					<div class="hotspot321Div"></div>
+					
+				</div>
+-->
+                <div id="hotspot322" class="cur" style="display: block;">
+                    <p id="hot322" class="hotspot">OCP slot (under Riser 1)</p>
+                    <img id="hotspot322plus" class="plus" src="">&nbsp;
+                </div>
+
+            </div>
+
+            <div id="point21text" style="display:none;">
+                <div id="point21text1"></div>
+                <div id="point21text01"></div>
+                <div id="point21img1">
+                    <img style="width: 100%;display: block;" src="" alt="" />
+                </div>
+                <div id="point21img2">
+                    <img style="width: 100%;display: block;" src="" alt="" />
+                </div>
+                <div id="point21img3">
+                    <ul id="slides2" class="slides">
+                        <li class="slide showing">
+                            <img style="width: 100%; display: block;" id="point21webimg1" src="" />
+                        </li>
+                        <li class="slide">
+                            <img style="width: 100%; display: block;" id="point21webimg2" src="" />
+                        </li>
+                        <li class="slide">
+                            <img style="width: 100%; display: block;" id="point21webimg3" src="" />
+                        </li>
+                        <li class="slide">
+                            <img style="width: 100%; display: block;" id="point21webimg4" src="" />
+                        </li>
+                    </ul>
+                </div>
+                <div id="point21text2"></div>
+                <div id="point21text02"></div>
+                <ul id="point21list">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div id="home" class="cur">
+                <img src="../../superblaze_demo_images/reset.png">
+            </div>
+            <div id="backText" class="noselect navDiv"></div>
+
+            <div id="maincanvasContainer"><canvas style="margin:0px" id="superblaze-canvas" width="1080"
+                    height="1920" /></div>
+        </div>
+    </div>
+    <div id="canvasContainer"
+        style="width:1080px;height:1920px;position:absolute;z-index:1;background-color:#fff;visibility:visible;">
+        <canvas style="margin:0px" id="dummy-canvas" width="1080" height="1920" />
+    </div>
+</body>
+
+</html>
