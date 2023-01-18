@@ -98,7 +98,7 @@ function showScene() {
         $("#loaderlogo").fadeIn(500);
         currneAnim = 2;
         $("#loaderlogo").fadeIn(500);
-        loadScreens();
+       
     }, 500);
 }
 
@@ -114,6 +114,7 @@ function loadScreens() {
    }
 
 }
+
 function TestChangeTexture(screenCh) {
    if (scene) {
       var mat = scene._Material_ref["Screen_Glass_mat_env"];

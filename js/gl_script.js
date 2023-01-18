@@ -751,6 +751,7 @@ $(window).load(function () {
                 menu14Click();
                 break;
             case "menu17":
+                $(".accordion").accordion("option", "active", false);
                 menu17Click();
                 break;
             case "menu18":
@@ -905,15 +906,13 @@ function UiLoader() {
     $("#rightAnim img").attr("src", "./images_gl/right_popup.svg");
     $("#lenovo_logo img").attr("src", "./images_gl/Lenovo.svg");
 
-
-
-    $("#hotspot1plus.plus").attr("src", "./images_gl/Drive/2X110.png");
-    $("#hotspot2plus.plus").attr("src", "./images_gl/Drive/2X110.png");
-    $("#hotspot3plus.plus").attr("src", "./images_gl/Drive/1.png");
-    $("#hotspot4plus.plus").attr("src", "./images_gl/Drive/23X137.png");
-    $("#hotspot4040plus.plus").attr("src", "./images_gl/NVMe/23_60.png");
-    $("#hotspot5050plus.plus").attr("src", "./images_gl/NVMe/23_60.png");
-    $("#hotspot6060plus.plus").attr("src", "./images_gl/NVMe/23_60.png");
+    $("#hotspot1plus.plus").attr("src", "./images_gl/NVMe/2X110.png");
+    $("#hotspot2plus.plus").attr("src", "./images_gl/NVMe/2X110.png");
+    $("#hotspot3plus.plus").attr("src", "./images_gl/NVMe/1.png");
+    $("#hotspot4plus.plus").attr("src", "./images_gl/NVMe/23X137.png");
+    $("#hotspot52plus.plus").attr("src","./images_gl/NVMe/23_60.png");
+    $("#hotspot62plus.plus").attr("src","./images_gl/NVMe/23_60.png");
+    $("#hotspot72plus.plus").attr("src","./images_gl/NVMe/1.png");
     $("#hotspot5plus.plus").attr("src", "./images_gl/PCIe/90X23.png");
     $("#hotspot6plus.plus").attr("src", "./images_gl/PCIe/2X110.png");
     $("#hotspot7plus.plus").attr("src", "./images_gl/PCIe/2X110.png");
@@ -946,7 +945,7 @@ function UiLoader() {
     $("#hotspot29plus.plus").attr("src", "./images_gl/PCIe/120X16.png");
     $("#hotspot30plus.plus").attr("src", "./images_gl/PCIe/120X16.png");
     $("#hotspot31plus.plus").attr("src", "./images_gl/PCIe/90X23.png");
-    $("#hotspot32plus.plus").attr("src", "./images_gl/lines/4.png");
+    $("#hotspot32plus.plus").attr("src", "./images_gl/PCIe/4.png");
     $("#hotspot33plus.plus").attr("src", "./images_gl/PCIe/2X110.png");
     $("#hotspot34plus.plus").attr("src", "./images_gl/PCIe/90X23.png");
     $("#hotspot35plus.plus").attr("src", "./images_gl/PCIe/90X23.png");
@@ -954,9 +953,9 @@ function UiLoader() {
     $("#hotspot37plus.plus").attr("src", "./images_gl/PCIe/23X119.png");
     $("#hotspot38plus.plus").attr("src", "./images_gl/PCIe/2X110.png");
     $("#hotspot39plus.plus").attr("src", "./images_gl/PCIe/2X110.png");
-    $("#hotspot40plus.plus").attr("src", "./images_gl/PCIe/120X16.png");
+    $("#hotspot40plus.plus").attr("src", "./images_gl/PCIe/44.png");
     $("#hotspot41plus.plus").attr("src", "./images_gl/PCIe/90X23.png");
-    $("#hotspot42plus.plus").attr("src", "./images_gl/lines/4.png");
+    $("#hotspot42plus.plus").attr("src", "./images_gl/PCIe/4.png");
     $("#hotspot43plus.plus").attr("src", "./images_gl/PCIe/2X110.png");
     $("#hotspot211plus.plus").attr("src", "./images_gl/PCIe/90X23.png");
     $("#hotspot212plus.plus").attr("src", "./images_gl/PCIe/2X110.png");
@@ -978,7 +977,7 @@ function UiLoader() {
     $("#hotspot320plus.plus").attr("src", "./images_gl/NVMe/23X137.png");
     $("#hotspot321plus.plus").attr("src", "./images_gl/NVMe/23X137.png");
     $("#hotspot322plus.plus").attr("src", "./images_gl/PCIe/2X110.png");
-    $("#hotspot411plus.plus").attr("src", "./images_gl/lines/4-1.png");
+    $("#hotspot411plus.plus").attr("src", "./images_gl/PCIe/4-1.png");
     $("#hotspot412plus.plus").attr("src", "./images_gl/NVMe/23_60.png");
     $("#hotspot413plus.plus").attr("src", "./images_gl/PCIe/2X110.png");
     $("#hotspot414plus.plus").attr("src", "./images_gl/NVMe/23_60.png");
@@ -990,9 +989,9 @@ function UiLoader() {
 
     $("#home img").attr("src", "./superblaze_demo_images/reset.png");
 
-    $("#point7image1 img").attr("src", "images_gl/intel.svg");
-    $("#point8image1 img").attr("src", "images_gl/intel.svg");
-    $("#point1image2 img").attr("src", "images_gl/intel.svg");
+    $("#point7image1 img").attr("src", "images_gl/Amd.svg");
+    $("#point8image1 img").attr("src", "images_gl/Amd.svg");
+    $("#point1image2 img").attr("src", "images_gl/Amd.svg");
 
     $("#point21img2 img").attr("src", "./images_gl/remote.png");
     $("#point21img1 img").attr("src", "./images_gl/lenovo-clarity.svg");
@@ -1000,7 +999,12 @@ function UiLoader() {
     $("#point21webimg2").attr("src", "./images_gl/mobile/screen2.jpg");
     $("#point21webimg3").attr("src", "./images_gl/mobile/screen3.jpg");
     $("#point21webimg4").attr("src", "./images_gl/mobile/screen4.jpg");
+
+    $("#point111_server_img1 img").attr("src","./images_gl/server/front.png");
+    $("#point111_server_img2 img").attr("src","./images_gl/server/rear.png");
+
     imgPreLoader();
+    loadScreens();
     var img = new Image();
     img.onload = function () {
     }
@@ -1337,20 +1341,16 @@ function rightAnimClick() {
 
 function mouseDownHide() {
     $(".point3headingText").css("opacity", "0");
-
     $(".point6headingText").css("opacity", "0");
-
     $(".point7headingText").css("opacity", "0");
     $(".point7text1").css("opacity", "0");
     $("#point7image1").css("opacity", "0");
-
     $(".point8headingText").css("opacity", "0");
     $(".point8text1").css("opacity", "0");
     $("#point8image1").css("opacity", "0");
 
 }
 function mouseWheelHide() {
-
     $("#point17text").css('display', 'none');
     $("#point19text").css('display', 'none');
     $('#point4text').css("display", "none");
@@ -1393,12 +1393,7 @@ function mouseWheelHide() {
     
 }
 function divHide() {
-    //   $("#point3Div").fadeOut(500); 
-    //   $("#point5Div").fadeOut(500);
-    //   $("#point7Div").fadeOut(500);
-    //   $("#HeadingDiv").css('display','none'); 
-    //   $("#HeadingDiv2").css('display','none'); 
-    //   $("#point8text").css('display','none'); 
+   
 }
 
 function objectHide() {
@@ -1416,6 +1411,7 @@ function objectHide() {
     scene.groupApplyState('Top_Cover_on');
     scene.groupApplyState('REF_VERTICAL');
     scene.groupApplyState('MB_OFF');
+    scene.groupApplyState('Server_show_new');
     scene.clearRefine();
     setTimeout(function () {
         clickEventActive = true;
@@ -1545,16 +1541,15 @@ function menu4Click() {
     $("#transPatch5").css('display', 'none');
     $("#cpHeading").text("2.5-inch Drive Configuration");
     $("#onloadCopy").css('display', 'none');
-    $("#menu").parents().prev(".menuitems").addClass("active")
+    $("#menu3").addClass('active');
+    $("#menu4").removeClass('active');
     $("#menu4").removeClass("disabled");
     $("#menu4").removeClass('active');
     $(".greyOutBox").removeClass('redOutBox');
     $("#menu4 .greyOutBox").addClass('redOutBox');
 
-    
     scene.groupApplyState('Storage_Rich_Configuation');
     scene.groupApplyState('Front_Panel_B_Vertical_HDD');
- 
  
     //check ref
     scene.groupApplyState('REMOTE_WIRE_OFF');
@@ -1589,19 +1584,23 @@ function menu4Click() {
 function menu5Click() {
     console.log("menu5_click");
     animStoped = false;
+    $("#cpHeading").text(" GPU-Rich Configuration");
     $("#menu5").addClass('active');
     $("#transPatch5").css('display', 'none');
     $("#menu5 .greyOutBox").addClass('redOutBox');
     $("#transparentPatch").css('display', 'none');
     $("#onloadCopy").css('display', 'none');
-
     objectHide();
-    $("#cpHeading").text(" GPU-Rich Configuration");
-    scene.groupApplyState('Front_Panel_B_Vertical_HDD');
-    scene.groupApplyState('INTERNAL_ON');
+    scene.groupApplyState('Server_show_new');
     scene.groupApplyState('GPU_Rich_Configuration');
+    scene.groupApplyState('Front_Panel_B_Vertical_HDD');
+    scene.groupApplyState('Internal_on');
     scene.groupApplyState('Top_Cover_OFF');
     scene.groupApplyState('NVME_2.5_3.5_OFF');
+    scene.groupApplyState('GPU_Card_ON');
+    scene.groupApplyState("GP_ON");
+    scene.groupApplyState("NVME_off")
+    scene.groupApplyState("HDD_NVME_4x2_off")
 
     scene.gotoPosInTime(0.8111365159615644, 0.5210535844213426, 1.1429460823097803, -1.9315143182667007, 210, 1000, function () {
 
@@ -1641,11 +1640,13 @@ function menu6Click() {
             animCounter2 = 0;
         }
     }, 2000);
+    scene.groupApplyState('Server_show_new');
     scene.groupApplyState('Remote_only_off');
     scene.groupApplyState('Front_Panel_C_Net_HDD');
     scene.gotoPosInTime(0.4126661705418002, 0.25492599775761343, 2.357616790500371, -3.490444065753773, 71.9715567005837, 2000, function () {
         $("#point16text").css('display', 'block');
         $("#point16text1").show();
+        scene.groupApplyState("3.5_inch_Drive_Configuation")
         scene.animPlayInTime("STATUS_DASHBOARD", 0.4580000, 1500);
         scene.animPlayInTime("Net_Screen", 0.8330000, 1500);
     });
@@ -1678,6 +1679,9 @@ function menu16Click() {
     $(".greyOutBox").removeClass('redOutBox');
     $("#menu16 .greyOutBox").addClass('redOutBox');
     objectHide();
+    scene.groupApplyState('Server_show_new');
+    scene.groupApplyState('Front_Panel_B_Vertical_HDD');
+    scene.groupApplyState('Remote_with_Cable_ON');
     scene.animPlayInTime("REMOTE_SR650_V02", 0, 1000);
     animCounter2 = 0;
     ScreenAnimInterval2 = setInterval(function () {
@@ -1691,24 +1695,24 @@ function menu16Click() {
         scene.groupApplyState('Front_Panel_B_Vertical_HDD');
         scene.groupApplyState('Remote_only_on');
         scene.groupApplyState('Remote_with_Cable_ON');
-        scene.gotoPosInTime(6.078237040726571, 0.09876771980702823, -8.168175941877074, 2.0515981418242575, 104.737350348993808, 1000);
+        scene.gotoPosInTime(6.078237040726571, 0.09876771980702823, 4.168175941877074, 2.0515981418242575, 140.737350348993808, 1000);
 
     }, 300));
     timeouts.push(setTimeout(function () {
         timeouts.push(setTimeout(function () {
-            scene.gotoPosInTime(6.091570281224077, 0.3770917098158292, 19.329445456034506, -20, 200, 1000);
+            scene.gotoPosInTime(6.078237040726571, 0.09876771980702823, 4.168175941877074, 2.0515981418242575, 180, 1000);
         }, 600));
-        scene.animPlayInTime("REMOTE_SR650_V02", 0, 1000);
+        scene.animPlayInTime("REMOTE_SR650_V02", 0, 600);
         scene.clearRefine();
     }, 2000));
     timeouts.push(setTimeout(function () {
         timeouts.push(setTimeout(function () {
-            scene.gotoPosInTime(0.2335021332552908, 0.3582267498421072, -1.3501516641343965, 0.533717480557064, 40, 1000);
+            scene.gotoPosInTime(0.2335021332552908, 0.3582267498421072, -0.3501516641343965, 0.533717480557064, 40, 1000);
         }, 500));
-        scene.groupApplyState('SERVER_HIDE');
+        scene.groupApplyState('Server_hide_new');
         scene.groupApplyState('Remote_with_Cable_OFF');
         scene.groupApplyState('Remote_only_on');
-        scene.animPlayInTime("REMOTE_SR650_V02", 0.7910000, 1000);
+        scene.animPlayInTime("REMOTE_SR650_V02", 0.7910000, 500);
         scene.clearRefine();
     }, 5000));
     timeouts.push(setTimeout(function () {
@@ -1716,11 +1720,14 @@ function menu16Click() {
         $("#point20text1").show();
     }, 1300));
     timeouts.push(setTimeout(function () {
-        animComplete();
         if (autoplayAnim) {
-            animCompeteAuto();
-        }
-    }, 5500));
+           animCompeteAuto();
+        } 
+        // else {
+        //    animComplete();
+        // }
+     },6000));
+     animComplete();
     scene.clearRefine();
 }
 
@@ -1729,18 +1736,24 @@ function menu16Click() {
 function menu7Click() {
     console.log("menu7_click");
     animStoped = false;
-    $("#cpHeading").html(" 3.5-inch Drive Configuration");
+    $("#cpHeading").html("3.5-inch Drive Configuration");
     $("#cpHeading").show();
     $("#onloadCopy").css('display', 'none');
     $("#menu7").addClass('active');
     $("#menu13").removeClass("active");
     $("#menu13 .greyOutBox").addClass("redOutBox");
     objectHide();
+    scene.groupApplyState('Server_show_new');
+    scene.groupApplyState('Card_Show');
+    scene.groupApplyState('Top_Cover_ON');
+    scene.groupApplyState('3.5_Inch_Drive_ON');
+    scene.groupApplyState("GP_ON");
+    scene.groupApplyState("REF_HORIZONTAL");
+    scene.groupApplyState("3.5_inch_Drive_Configuation");
     scene.groupApplyState('Front_Panel_A_Horizontal_HDD');
-    scene.groupApplyState('3.5_Inch_Drive_Configuration');
 
     scene.gotoPosInTime(6.216692405045265, 0.005304073464102062, 1.4692997072480447, -1.3848181741363663, 175.14432637717911, 1000, function () {
-        $("#point7Div,#hotspot4040,#hotspot5050,#hotspot6060").css('display', 'block');
+        $("#point7Div,#hotspot52,#hotspot62,#hotspot72").css('display', 'block');
     });
     animComplete();
     timeouts.push(setTimeout(function () {
@@ -1750,10 +1763,11 @@ function menu7Click() {
     }, 2500));
     scene.clearRefine();
 }
+
 function menu13Click() {
     console.log("menu13_click");
     animStoped = false;
-    $("#cpHeading").html(" 3.5-inch Drive Configuration");
+    $("#cpHeading").html("3.5-inch Drive Configuration");
     $("#cpHeading").show();
     $("#onloadCopy").css('display', 'none');
     $("#menu7").addClass('active');
@@ -2300,7 +2314,7 @@ function menu12Click() {
 function menu14Click() {
     animStoped = false;
     console.log("menu_14_clicked");
-    $("#cpHeading").html("Interior of Storage-rich Configuration");
+    $("#cpHeading").html("Interior of 2.5-inch Drive Configuration");
     $("#cpHeading").show();
     $("#onloadCopy").css("opacity", "0").fadeOut(400);
     $("#menu3").addClass('active');
@@ -2314,7 +2328,7 @@ function menu14Click() {
     scene.groupApplyState('Top_Cover_OFF');
     scene.groupApplyState('Internal_ON');
     scene.groupApplyState('2.5_inch');
-    scene.groupApplyState('Storage _Rich_Configuation');
+    scene.groupApplyState('Storage_Rich_Configuation');
     scene.groupApplyState('Extra_part_OFF');
     scene.gotoPosInTime(5.296261619604739, 0.8977462258193575, 0.7956863385817967, -3.393360640626445, 205, 1000, function () {
         scene.animPlayInTime("NVME_back", 0.83, 1000);
@@ -2337,27 +2351,17 @@ function menu14Click() {
 function menu17Click() {
     console.log("menu17Clicked");
     animStoped = false;
-    reversAll();
+    $("#cpHeading").html("PCIe Slot-Rich Configurations");
+    $("#transPatch5").css('display', 'block');
     $("#onloadCopy").css("display", "none");
-    // $("#menu3").addClass('active');
-    // $("#menu17").addClass('active');
-    // $("#menu17").removeClass("disabled");
-    // $("#menu17").removeClass('active');
-    // $(".greyOutBox").removeClass('redOutBox');
-    // $("#menu17 .greyOutBox").addClass('redOutBox');
-    // $("#cpHeading").html("Storage Rich 2.5-inch<br> Drive Configuration");
-    // $("#cpHeading").addClass("NewStylecpHeading").hide();
+    $("#dummy-canvas").css("pointer-events", "none");
+    $("#rightAnim").css("display", "none");
+
     objectHide();
-    scene.groupApplyState('Front_Panel_B_Vertical_HDD');
-    scene.groupApplyState('Internal_ON');
-    scene.groupApplyState('NVME_2.5_3.5_OFF');
-    scene.groupApplyState('Top_Cover_OFF');
-    scene.groupApplyState('GP_OFF');
-    scene.groupApplyState('Extra_part_OFF');
-    scene.groupApplyState('Storage _Rich_Configuation');
-    scene.gotoPosInTime(0.000307880394201163, 1.5679644737231006, -19.66861618336338, 0.18285744387308078, 150, 80, function () {
-        $("#point111text").show();
-    });
+    scene.groupApplyState('Server_hide_new');
+
+    $("#point111text").css('display', 'block');
+
     timeouts.push(setTimeout(function () {
         timeouts.push(setTimeout(function () {
             animComplete();
@@ -2375,7 +2379,7 @@ function menu18Click() {
     console.log("menu18Clicked");
     $("#onloadCopy").css("opacity", "0").fadeOut(400);
     animStoped = false;
-    $("#cpHeading").text("Rear View ");
+    $("#cpHeading").text("Rear View");
     $("#cpHeading").show();
     $("#menu3").addClass('active');
     $("#menu18").addClass('active');
@@ -2384,8 +2388,16 @@ function menu18Click() {
     $(".greyOutBox").removeClass('redOutBox');
     $("#menu18 .greyOutBox").addClass('redOutBox');
     objectHide();
+    scene.groupApplyState('Server_show_new');
+    scene.groupApplyState('Storage_Rich_Configuation');
+    scene.groupApplyState('REMOTE_WIRE_OFF');
+    scene.groupApplyState('Remote_only_off');
+    scene.groupApplyState('Remote_hide');
+ 
+    scene.groupApplyState("GP_ON");
+    scene.groupApplyState('Card_Hide');
     scene.groupApplyState('Front_Panel_B_Vertical_HDD');
-    scene.groupApplyState('Storage _Rich_Configuation');
+    scene.groupApplyState("TOP_MESH_FIX_SHOW");
     scene.clearRefine();
     scene.gotoPosInTime(3.1228533775245864, 0.024000652723075104, 0.014641735671303, -1.3848181741363663, 155.14432637717911, 1000, function () {
         $("#point18text").css('display', 'block');
@@ -2525,6 +2537,14 @@ function autoPlayAllAnimations() {
         console.log("currneAnim" + currneAnim);
 
         if (currneAnim == 2) {
+            currneAnim = 12
+            AutoPlayMenus(currneAnim);
+        }
+        else if (currneAnim == 12) {
+            currneAnim = 20
+            AutoPlayMenus(currneAnim);
+        }
+        else if (currneAnim == 20) {
             currneAnim = 3
             AutoPlayMenus(currneAnim);
         }
@@ -2537,14 +2557,9 @@ function autoPlayAllAnimations() {
             AutoPlayMenus(currneAnim);
         }
         else if (currneAnim == 14) {
-            currneAnim = 17
-            AutoPlayMenus(currneAnim);
-        }
-        else if (currneAnim == 17) {
             currneAnim = 18
             AutoPlayMenus(currneAnim);
-        }
-        else if (currneAnim == 18) {
+        } else if (currneAnim == 18) {
             currneAnim = 7
             AutoPlayMenus(currneAnim);
         } else if (currneAnim == 7) {
@@ -2560,18 +2575,15 @@ function autoPlayAllAnimations() {
             currneAnim = 5
             AutoPlayMenus(currneAnim);
         } else if (currneAnim == 5) {
+            currneAnim = 17
+            AutoPlayMenus(currneAnim);
+        } else if (currneAnim == 17) {
             currneAnim = 6
             AutoPlayMenus(currneAnim);
         } else if (currneAnim == 6) {
             currneAnim = 16
             AutoPlayMenus(currneAnim);
         } else if (currneAnim == 16) {
-            currneAnim = 12
-            AutoPlayMenus(currneAnim);
-        } else if (currneAnim == 12) {
-            currneAnim = 20
-            AutoPlayMenus(currneAnim);
-        } else if (currneAnim == 20) {
             currneAnim = 10
             AutoPlayMenus(currneAnim);
         } else if (currneAnim == 10) {
@@ -2670,6 +2682,7 @@ function AutoPlayMenus(currneAnim) {
             menu14Click();
             break;
         case "menu17":
+            $(".accordion").accordion("option", "active", false);
             menu17Click();
             break;
         case "menu18":
@@ -3312,7 +3325,6 @@ function hotspotPosAsignment() {
     var toptPosPoint42 = -((pos2Dpoint42[1] * 50) - 50);
     var toptPosPoint43 = -((pos2Dpoint43[1] * 50) - 50);
  
- 
     var toptPosPoint311 = -((pos2Dpoint311[1] * 50) - 50);
     var toptPosPoint312 = -((pos2Dpoint312[1] * 50) - 50);
     var toptPosPoint313 = -((pos2Dpoint313[1] * 50) - 50);
@@ -3337,7 +3349,6 @@ function hotspotPosAsignment() {
     $("#hotspot40").css('left',leftPosPoint16 + '%').css('top',toptPosPoint16 + '%');
     $("#hotspot1").css('left',leftPosPoint114 + '%').css('top',toptPosPoint114 + '%');
  
- 
     $("#hotspot2").css('left',leftPosPoint34 + '%').css('top',toptPosPoint34 + '%');
     $("#hotspot3").css('left',leftPosPoint35 + '%').css('top',toptPosPoint35 + '%');
     $("#hotspot4").css('left',leftPosPoint36 + '%').css('top',toptPosPoint36 + '%');
@@ -3348,17 +3359,13 @@ function hotspotPosAsignment() {
     $("#hotspot92").css('left',leftPosPoint41 + '%').css('top',toptPosPoint41 + '%');
     $("#hotspot93").css('left',leftPosPoint42 + '%').css('top',toptPosPoint42 + '%');
  
- 
     $("#hotspot94").css('left',leftPosPoint43 + '%').css('top',toptPosPoint43 + '%');
- 
  
     $("#hotspot95").css('left',leftPosPoint311 + '%').css('top',toptPosPoint311 + '%');
     $("#hotspot96").css('left',leftPosPoint312 + '%').css('top',toptPosPoint312 + '%');
     $("#hotspot97").css('left',leftPosPoint313 + '%').css('top',toptPosPoint313 + '%');
     $("#hotspot98").css('left',leftPosPoint314 + '%').css('top',toptPosPoint314 + '%');
     $("#hotspot315").css('left',leftPosPoint315 + '%').css('top',toptPosPoint315 + '%');
- 
- 
  
  
     if (Math.floor(sceneViewMatrix[5]) == 0) {
@@ -3876,8 +3883,10 @@ function parseXml() {
 
             });
             $(document).find("point111text").each(function () {
-                var point111_2 = $(this).find('point111text1').text();
-                $('#point111text1').append(point111_2);
+                var point111_1 = $(this).find('point111text1').text();
+                $('#point111text1').append(point111_1);
+                var point111_2 = $(this).find('point111text2').text();
+                $('#point111text2').append(point111_2);
 
             });
             $(document).find("point15text").each(function () {

@@ -354,27 +354,24 @@
             ]]>
         </point10text11>
       </point10text>  
-    <point11text>
+      <point11text>
         <point11text1>
             <![CDATA[ The  SR665  V3 features  one  or two 4th Generation  AMD EPYC™ Processors with  high core counts and PCIe  lane  counts per  socket providing  extreme  configuration  flexibility and  the ultimate in processing  power  needed  for  enterprise-class  performance.
               ]]>
         </point11text1>
       </point11text>
-  <point111text>
+      <point111text>
         <point111text1>
-          <![CDATA[ 
-               ThinkSystem SR650 V3 supports up to two 4ᵗʰ Gen Intel® Xeon® Scalable processors and the latest
-               Intel® Optane memory for the speed and power necessary to tackel modern enterprise workloads.    ]]>
+          <![CDATA[ The  server  supports  a configuration  of  three  front-accessible  slots (2x PCIe 4.0 FH slots, 1x OCP 3.0 slot), along  with 16x 2.5-inch  hot-swap  drives
+          ]]>
         </point111text1>
+        <point111text2>
+          <![CDATA[ The  server  also supports  a configuration  of  10 slots at the rear  of  the server  (6x  FH, 4x LP)
+          ]]>
+        </point111text2>
       </point111text>
 
-	  <point12text>
-<!--
-         <point12text1>
-              <![CDATA[ 
-              ]]>
-         </point12text1>
--->
+	    <point12text>
          <point12text1>
              <![CDATA[ The unique design of this server accommodates a mid-chassis drive cage for up to 4x 3.5-inch. hot-swap drives.
              ]]>
@@ -412,12 +409,7 @@
             <![CDATA[ Accelerate time to productivity to focus on your customers and growing business.
             ]]>
          </point13text11>
-<!--
-         <point11text12>
-            <![CDATA[ TruScale Infrastructure Services
-            ]]>
-         </point11text12>
--->
+
          <point13_li1_1>
             <![CDATA[ Workshops
             ]]>
@@ -488,7 +480,10 @@
 <point15text>
          <point15text1>
             <![CDATA[ 
-                 The SR650 V3 can accommodate up to 3 double-width GPUs or up to 8 single-wide GPUs (shown).
+                The  SR665  V3 supports  high-performance  GPUs:</br>
+                • Up  to 3 double-width  GPUs, 350W each</br>
+                • Up  to 6 single-width  GPUs, 150W each</br>
+                • Up  to 8 single-width  low-profile  GPUs, 75W each  (shown)
             ]]>
          </point15text1>
 </point15text>
@@ -497,7 +492,6 @@
             <![CDATA[ For some configurations such as the 16x 2.5-inch model shown can be configured with an integrated pull-out LCD diagnostics panel for active alerts and system status.
             ]]>
          </point16text1>
-        
 </point16text>
 
 <point17text>
@@ -518,7 +512,8 @@
       </point19text>
         <point20text>
         <point20text1>
-          <![CDATA[ All configurations have a special port to connect an External Diagnostics Handset with an LCD display.]]>
+          <![CDATA[ The server offers a dedicated port to connect an optional External Diagnostics Handset with an LCD display for a variety of system status functions.
+          ]]>
         </point20text1>
       </point20text>
 

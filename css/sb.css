@@ -1125,41 +1125,37 @@ font-size:20px;
     position: absolute;
     pointer-events: none;
 }
-
 #hot1 {
-    text-align: center;
-    top: 115px;
-    left: -44px;
+   text-align: center;
+    top: -9px;
+    left: -159px;
     width: 90px;
     position: absolute;
-    font-size: 18px;
+    font-size: 15px;
 }
-
 #hotspot1plus {
-    position: absolute;
-    top: 0;
-    left: -3px;
+   position: absolute;
+    top: -27px;
+    left: -41px;
+    transform: rotate(90deg);
 }
 
 #hotspot2 {
     position: absolute;
     pointer-events: none;
 }
-
 #hot2 {
-    position: absolute;
-    top: -181px;
+        position: absolute;
+    top: 120px;
     left: -70px;
     width: 150px;
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
 }
-
 #hotspot2plus {
-    position: absolute;
-    top: -138px;
-    left: -4px;
-    transform: rotate(180deg);
+       position: absolute;
+    top: 4px;
+    left: -3px;
 }
 
 #hotspot3 {
@@ -1167,113 +1163,88 @@ font-size:20px;
     pointer-events: none;
 
 }
-
 #hot3 {
-    position: absolute;
-    top: -113px;
-    left: -100px;
-    width: 200px;
+   position: absolute;
+    top: 83px;
+    left: -112px;
+    width: 131px;
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
 }
-
 #hotspot3plus {
-    position: absolute;
-    top: -30px;
-    left: -310px;
+   position: absolute;
+    top: 20px;
+    left: -56px;
 }
-
 #hotspot4 {
     position: absolute;
 }
-
 #hot4 {
     position: absolute;
-    top: -177px;
-    left: -70px;
-    width: 150px;
+    top: 24px;
+    left: 65px;
+    width: 100px;
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
 }
-
 #hotspot4plus {
     position: absolute;
-    top: -127px;
-    left: -10px;
+    top: -16px;
+    left: 15px;
+    transform: rotate(300deg);
+}
+
+#hotspot52, #hotspot62, #hotspot72 {
+    position: absolute;
+}
+#hot52 {
+    position: absolute;
+    top: -29px;
+    left: 69px;
+    width: 124px;
+    font-size: 15px;
+}
+#hot62 {
+    position: absolute;
+    top: -80px;
+    left: -63px;
+    width: 139px;
+    font-size: 15px;
+}
+#hot72 {
+    position: absolute;
+    top: -65px;
+    left: -103px;
+    width: 258px;
+    font-size: 15px;
+}
+#hotspot52plus {
+       position: absolute;
+    top: -31px;
+    left: 18px;
+    transform: rotate(-90deg);
+}
+#hotspot62plus {
+   position: absolute;
+    top: -53px;
+    left: -9px;
     transform: rotate(180deg);
 }
-
-#hotspot4040 {
-    position: absolute;
-}
-
-#hot4040 {
-    position: absolute;
-    top: -156px;
-    left: 29px;
-    width: 106px;
-    text-align: center;
-    font-size: 18px;
-}
-
-#hotspot4040plus {
-    position: absolute;
-    top: -67px;
-    left: 7px;
-    transform: rotate(213deg);
-}
-
-#hotspot5050 {
-    position: absolute;
-}
-
-#hot5050 {
-    position: absolute;
-    top: 38px;
-    left: 22px;
-    width: 126px;
-    text-align: center;
-    font-size: 18px;
-}
-
-#hotspot5050plus {
-    position: absolute;
-    top: -16px;
-    left: 18px;
-    transform: rotate(301deg);
+#hotspot72plus {
+       position: absolute;
+    top: -17px;
+    left: -309px;
+    transform: rotate(0deg);
+    width: 600px;
 }
 
 #hotspot5 {
     position: absolute;
-}
-
-#hotspot6060 {
-    position: absolute;
-}
-
-#hot6060 {
-    position: absolute;
-    top: 136px;
-    left: -130px;
-    width: 150px;
-    text-align: center;
-    font-size: 18px;
-}
-
-#hotspot6060plus {
-    position: absolute;
-    top: 70px;
-    left: -70px;
-}
-
-#hotspot5 {
-    position: absolute;
-
 }
 
 #hot5 {
-    top: 648px;
-    left: 800px;
+    top: 612px;
+    left: 763px;
     width: 220px;
     text-align: left;
     position: absolute;
@@ -1281,11 +1252,11 @@ font-size:20px;
 }
 
 #hotspot5plus {
-    top: 715px;
-    left: 768px;
+    top: 697px;
+    left: 759px;
     position: absolute;
-    height: 29px;
-    transform: rotate(503deg);
+    height: 30px;
+    transform: rotate(478deg);
 }
 
 #hotspot6 {
@@ -1294,20 +1265,20 @@ font-size:20px;
 }
 
 #hot6 {
-    top: 707px;
-    left: 877px;
-    width: 190px;
-    text-align: center;
+    top: 669px;
+    left: 906px;
+    width: 158px;
+    /* text-align: center; */
     position: absolute;
     font-size: 18px;
 }
 
 #hotspot6plus {
-    top: 731px;
+    top: 728px;
     left: 897px;
     position: absolute;
-    height: 105px;
-    transform: rotate(234deg);
+    height: 94px;
+    transform: rotate(211deg);
 }
 
 #hotspot7 {
@@ -2486,18 +2457,19 @@ font-size:20px;
 
 #hot40 {
     position: absolute;
-    top: -269px;
-    left: -80px;
-    width: 326px;
+    top: -264px;
+    left: -266px;
+    width: 426px;
     text-align: center;
     font-size: 18px;
 }
 
 #hotspot40plus {
     position: absolute;
-    top: -155px;
-    left: -24px;
-    transform: rotate(-48deg);
+    top: -212px;
+    left: -324px;
+    width: 500px;
+    /* transform: rotate(0deg); */
 }
 
 /*
@@ -2546,86 +2518,98 @@ font-size:20px;
     position: absolute;
 
 }
-
 #hot43 {
     position: absolute;
+    top: 1017px;
+    left: 26px;
+    width: 149px;
     text-align: center;
-    left: -139px;
-    top: 111px;
-    width: 245px;
     font-size: 18px;
 }
-
 #hotspot43plus {
     position: absolute;
-    top: 15px;
-    left: -391px;
+    top: 904px;
+    left: 220px;
+    height: 150px;
+    transform: rotate(66deg);
 }
 
 #hotspot311 {
     position: absolute;
 
 }
-
 #hot311 {
     position: absolute;
-    top: 207px;
-    left: -50px;
+    top: 670px;
+    left: 747px;
     width: 140px;
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
 }
-
 #hotspot311plus {
     position: absolute;
-    top: 35px;
-    left: 0px;
-    /* transform: rotate(-15deg); */
-    height: 166px;
+    top: 557px;
+    left: 823px;
+    transform: rotate(32deg);
+    height: 124px;
 }
+
 
 #hotspot312 {
     position: absolute;
 
 }
-
 #hot312 {
     position: absolute;
-    top: 148px;
-    left: -42px;
-    width: 97px;
+    top: 614px;
+    left: 688px;
+    width: 100px;
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
 }
-
 #hotspot312plus {
     position: absolute;
-    top: -23px;
-    left: 0px;
-    /* transform: rotate(-7deg); */
-    height: 171px;
+    top: 480px;
+    left: 760px;
+    transform: rotate(16deg);
+    height: 130px;
 }
-
 #hotspot313 {
     position: absolute;
 
 }
-
 #hot313 {
     position: absolute;
-    top: 121px;
-    left: -171px;
-    width: 65px;
+    top: 541px;
+    left: 469px;
+    width: 182px;
+    text-align: center;
+    font-size: 15px;
+}
+#hotspot313plus {
+    position: absolute;
+    top: 465px;
+    left: 668px;
+    transform: rotate(68deg);
+}
+#hotspot313 {
+    position: absolute;
+
+}
+#hot313 {
+    position: absolute;
+    top: 1078px;
+    left: 58px;
+    width: 202px;
     text-align: center;
     font-size: 18px;
 }
-
 #hotspot313plus {
     position: absolute;
-    top: -3px;
-    left: -45px;
-    transform: rotate(40deg);
-    height: 134px;
+    top: 958px;
+    left: 347px;
+    height: 188px;
+    transform: rotate(68deg);
 }
 
 #hotspot314 {
@@ -2653,21 +2637,19 @@ font-size:20px;
     position: absolute;
 
 }
-
 #hot315 {
     position: absolute;
-    top: -171px;
-    left: -151px;
-    width: 161px;
+    top: -355px;
+    left: -255px;
+    width: 150px;
     font-size: 18px;
 }
-
 #hotspot315plus {
     position: absolute;
-    top: -134px;
-    left: -23px;
-    transform: rotate(150deg);
-    height: 147px;
+    top: -321px;
+    left: -115px;
+    transform: rotate(140deg);
+    height: 170px;
 }
 
 #hotspot316 {
@@ -2691,52 +2673,43 @@ font-size:20px;
     transform: rotate(281deg);
 }
 
-#hotspot317,
-#hotspot318,
-#hotspot319,
-#hotspot320,
-#hotspot321,
-#hotspot322 {
+#hotspot317,#hotspot318,#hotspot319,#hotspot320,#hotspot321,#hotspot322 {
     position: absolute;
 
 }
-
 #hot317 {
     position: absolute;
-    top: -99px;
-    left: 29px;
-    width: 180px;
-    text-align: center;
+    top: 647px;
+    left: 827px;
+    width: 223px;
+    text-align: left;
     font-size: 18px;
 }
-
 #hotspot317plus {
     position: absolute;
-    top: -72px;
-    left: 44px;
-    transform: rotate(225deg);
-    height: 133px;
+    top: 666px;
+    left: 854px;
+    height: 159px;
+    transform: rotate(209deg);
 }
 
 #hot318 {
     position: absolute;
-    top: 312px;
-    left: -132px;
+    top: 576px;
+    left: 555px;
     width: 180px;
-    text-align: center;
-    font-size: 18px;
+    text-align: left;
+    font-size: 15px;
 }
-
-.hotspot318Div {
+.hotspot318Div{
     position: absolute;
-    top: 51px;
-    left: -20px;
+    top: 18px;
+    left: -18px;
     height: 258px;
     transform: rotate(5deg);
     border-left: 3px dotted #ff0000;
 }
-
-.hotspot318Div::before {
+.hotspot318Div::before{
     content: '';
     display: block;
     background-color: #ff0000;
@@ -2744,63 +2717,55 @@ font-size:20px;
     height: 5px;
     margin-left: -3px;
 }
-
 #hotspot318plus {
     position: absolute;
-    top: -13px;
-    left: -32px;
-    transform: rotate(40deg);
+    top: 339px;
+    left: 733px;
+    transform: rotate(376deg);
 }
-
 #hot319 {
     position: absolute;
-    top: -47px;
-    left: 104px;
+    top: -82px;
+    left: 44px;
     width: 100px;
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
 }
-
 #hotspot319plus {
     position: absolute;
-    top: -45px;
-    left: 65px;
-    transform: rotate(239deg);
+    top: -53px;
+    left: 41px;
+    transform: rotate(218deg);
 }
-
 #hot320 {
     position: absolute;
-    top: -110px;
-    left: 94px;
+    top: 155px;
+    left: 757px;
     width: 100px;
-    text-align: center;
-    font-size: 18px;
+    text-align: left;
+    font-size: 15px;
 }
-
 #hotspot320plus {
     position: absolute;
-    top: -122px;
-    left: 28px;
-    transform: rotate(-124deg);
+    top: 125px;
+    left: 678px;
+    transform: rotate(-114deg);
 }
-
 #hot321 {
     position: absolute;
     top: 154px;
     left: 0;
     width: 180px;
-    font-size: 18px;
+    font-size: 15px;
 }
-
-.hotspot321Div {
+.hotspot321Div{
     position: absolute;
     top: 0;
     left: 0;
     height: 150px;
     border-left: 2px dotted #ff0000;
 }
-
-.hotspot321Div::before {
+.hotspot321Div::before{
     content: '';
     display: block;
     background-color: #ff0000;
@@ -2808,7 +2773,6 @@ font-size:20px;
     height: 5px;
     margin-left: -3px;
 }
-
 #hotspot321plus {
     position: absolute;
     top: -43px;
@@ -2816,21 +2780,18 @@ font-size:20px;
     height: 190px;
     width: 18px;
 }
-
 #hot322 {
     position: absolute;
-    top: -91px;
-    left: -71px;
-    width: 254px;
-    font-size: 18px;
+    top: 130px;
+    left: 644px;
+    width: 179px;
+    font-size: 15px;
 }
-
 #hotspot322plus {
     position: absolute;
-    top: -61px;
-    left: 12px;
-    transform: rotate(-155deg);
-    height: 100px;
+    top: 136px;
+    left: 636px;
+    transform: rotate(-127deg);
 }
 
 #Heading {
@@ -4916,27 +4877,6 @@ img#desktopSvg4 {
 
 
 /*End*/
-#pointtext1 {
-    position: relative;
-    left: 60px;
-    top: -10px;
-}
-
-.point1text2Hotspot {
-    position: absolute;
-    top: 170px;
-    left: 160px;
-}
-
-.point1text4Hotspot {
-    position: absolute;
-    top: 210px;
-    left: 14px;
-}
-
-#pointtext1 .headingText {
-    margin-left: 15px;
-}
 
 .point1text1 {
     position: absolute;
@@ -4961,110 +4901,9 @@ img#desktopSvg4 {
     line-height: 0px;
 }
 
-.point1_1img {
-    position: absolute;
-    top: 0px;
-    left: 19px;
-}
-
-.point1_2img {
-    top: -25px;
-    left: 39px;
-    position: absolute;
-}
-
-.point3_1img {
-    top: -69px;
-    left: -79px;
-    position: absolute;
-    /* width: 220px; */
-}
-
-.point3_2img {
-    top: 5px;
-    left: 92px;
-    position: absolute;
-}
-
-.point3_3img {
-    top: -55px;
-    left: -342px;
-    position: absolute;
-}
-
-.point3_4img {
-    top: -2px;
-    left: 527px;
-    position: absolute;
-}
-
-.enbled {
-    display: block !important;
-}
-
-.point3_5img {
-    top: -2px;
-    left: 308px;
-    position: absolute;
-}
-
-.point3_6img {
-    top: -14px;
-    left: 352px;
-    position: absolute;
-}
-
-.point3_7img {
-    top: 0px;
-    left: 473px;
-    position: absolute;
-}
-
-.point3_8img {
-    /* width: 125px; */
-    /* line-height: 12px; */
-    top: -8px;
-    left: 8px;
-    position: absolute;
-}
-
-/*.point6_1img {
-    top: 236px;
-    left: 213px;
-    position: absolute;
-    width: 220px;
-}
-.point6_2img {
-    top: 324px;
-    left: 191px;
-    position: absolute;
-}
-.point6_3img {
-    top: 396px;
-    left: 725px;
-    position: absolute;
-}
-.point6_4img {
-    top: 208px;
-    left: 703px;
-    position: absolute;
-}*/
-.point1text5 {
-    left: 753px;
-    bottom: -77px;
-    width: 225px;
-}
-
-.point1text6 {
-    left: 781px;
-    bottom: -314px;
-    width: 113px;
-}
-
 #point2text {
     pointer-events: all;
 }
-
 
 #point2text {
     display: none;
@@ -5075,8 +4914,6 @@ img#desktopSvg4 {
     width: 93%;
     height: auto;
 }
-
-
 
 p.Text6menu.point3text9 {
     top: 280px;
@@ -5097,22 +4934,6 @@ p.Text6menu.point3text12 {
     top: 330px;
     left: 400px;
 }
-
-
-
-
-
-
-
-#point8text {}
-
-/*
-#point9text{
-    position: absolute;
-    left: 60%;
-    top: 32%;
-}
-*/
 
 #point7text {
     max-width: 380px;
@@ -5167,23 +4988,10 @@ span#overviewtx4 {
     margin-left: 17px;
 }
 
-
-/*
-#point9text p img {
-    vertical-align: bottom;
-}
-*/
-
-/*network*/
-
-
 #point5text .descriptionDemo {
     left: 219px;
     top: 80px;
 }
-
-
-
 
 div#networkImg_01 {
     position: absolute;
@@ -5294,15 +5102,11 @@ div#networkImg_line2 {
 
 }
 
-
-
-
 div#networkImg_07 {
     position: absolute;
     top: 331px;
     left: 648px;
 }
-
 
 .networkImg_line2 {
     position: absolute;
@@ -5310,18 +5114,6 @@ div#networkImg_07 {
     left: 187px;
     overflow: hidden;
 }
-
-/*
-    position: absolute;
-    bottom: -416px;
-    left: 187px;
-    height: 0;
-    border: 1px solid;
-    overflow: hidden;
-*/
-
-
-
 
 .animPlayBtns,
 .animPlayBtns1 {
@@ -7381,25 +7173,55 @@ div#ButtonController {
     position: absolute;
     width: 431px;
     line-height: 38px;
-    top: 462px;
+    top: 562px;
     left: 38px;
 
 }
 
+#point111text1 {
+    position: absolute;
+    width: 1001px;
+    line-height: 34px;
+    top: 593px;
+    left: 60px;
+    /* text-align: center; */
+    font-size: 28px;
+}
+#point111text2{
+    position: absolute;
+    width: 994px;
+    line-height: 34px;
+    top: 1000px;
+    left: 61px;
+    font-size: 28px;
+}
+
+#point111_server_img1 {
+    position: absolute;
+    top: 720px;
+    left: 51px;
+}
+
+#point111_server_img2 {
+    position: absolute;
+    top: 1090px;
+    left: 51px;
+}
+
 #point15text1 {
     position: absolute;
-    width: 854px;
+    width: 900px;
     line-height: 38px;
-    top: 356px;
+    top: 345px;
     left: 127px;
-    text-align: center;
+    /*  text-align: center; */
 }
 
 #point16text1 {
     position: absolute;
     width: 854px;
     line-height: 38px;
-    top: 356px;
+    top: 328px;
     /*    left: 146px;*/
     left: 110px;
     text-align: center;
@@ -7407,11 +7229,10 @@ div#ButtonController {
 
 #point20text1 {
     position: absolute;
-    width: 854px;
+    width: 891px;
     line-height: 38px;
     top: 356px;
-    /*    left: 146px;*/
-    left: 110px;
+    left: 83px;
     text-align: center;
 }
 
@@ -7445,15 +7266,15 @@ div#ButtonController {
 #point21img2 {
     width: 400px;
     position: absolute;
-    top: 1100px;
+    top: 1056px;
     left: 554px;
 }
 
 #point21img3 {
     width: 330px;
     position: absolute;
-    top: 500px;
-    left: 600px;
+    top: 460px;
+    left: 620px;
 }
 
 .slides {
