@@ -20,7 +20,7 @@ var infinityrt_navigation = function (scene,w,h) {
    this._ellipticalNav = false;
 
    //DESKTOP NAVIGATION VALUES*************************
-   this._navRotationSpeed = 0.035;
+   this._navRotationSpeed = 0.055;
    this._navDollySpeed = 0.00075;
    this._navPanSpeed = 0.072;
    this._navDecay = 0.3;

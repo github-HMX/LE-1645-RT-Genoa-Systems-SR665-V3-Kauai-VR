@@ -488,19 +488,15 @@ function load_img() {
 function afterLoad() {
     $('#transPatch').css('display', 'block');
     $('.fullScreenBox,#close_btn,#logoAdidas,#logoPredator').css('visibility', 'visible');
-
 }
-
 
 $(document).ready(function () {
     load_img();
-
     $(document).on('click', '.playAll', autoPlayAllAnimations)
     $(document).on('click', '.pauseAll', autoPauseAllAnimations)
 });
 
 $(window).load(function () {
-    // load_img(); 
 });
 
 function closeSuperblaze() {
@@ -517,7 +513,6 @@ $(function () {
     resizePage(window.innerWidth, window.innerHeight);
     resizePage(window.document.documentElement.clientWidth, window.document.documentElement.clientHeight);
     if ((navigator.userAgent.indexOf('iPad') != -1) || (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0)) {
-        // console.log("ie1")
         $("#close").css('display', 'none');
         $("#fullScreen").css('display', 'none');
     } else {
@@ -544,7 +539,6 @@ $(window).load(function () {
 
 });
 
-
 function onReset() {
     onResetCameraClickGL(); //in _ui.js
 }
@@ -557,8 +551,6 @@ function onZoomSlide(event, ui) {
 }
 
 $(function () {
-    // Slider
-    //range: 'min',
     $('#zoom_slider').slider({
         orientation: "vertical",
         value: 155,
@@ -572,7 +564,6 @@ $(function () {
     $('.nodrag').mousedown(function () {
         return false
     });
-
 });
 
 function buttonsZoom(value) {
@@ -584,6 +575,7 @@ function buttonsZoom(value) {
         updateZoomBar(g_navDolly - 10);
     }
 }
+
 var updateEnabled = true;
 var canvas = null,
     canvas2 = null;
@@ -600,33 +592,26 @@ var autoplayAnim = false;
 
 $(document).ready(function () {
     animationLoading = setInterval(function () {
-        //                                 console.log("loaderbar>>")
         tempW = tempW + 1;
         if (tempW > 30) tempW = 30;
         $("#loaderbar").css("width", tempW + "px");
 
     }, 100);
 })
+
 function isSuperblazeReady() {
-    //    console.log("in")
     if (scene) {
         scene.start();
         outstandingJobs = scene.getOutstandingJobs();
-        //         console.log("outstandingJobs", outstandingJobs);
         scene.gotoPosInTime(0.310710362172653, 0.09103607346410204, -2.384132972905103, -1.070085900494059, 170, 1);
-
-
-        if (!(scene._projectparsed /*&& scene._started*/)) {
+        if (!(scene._projectparsed)) {
             if (firstTime) {
-
                 firstTime = false;
-
-
             }
         } else if (outstandingJobs <= 0 && scene._prepared) {
             onSuperBlazeReady();
             clearInterval(_scenePollInterval);
-        } else if (scene._projectparsed /*&& scene._started*/) {
+        } else if (scene._projectparsed) {
             clearInterval(animationLoading);
             updateProgressBar();
         }
@@ -638,10 +623,8 @@ function updateProgressBar() {
     totalJobs = scene.getTotalJobs();
     outstandingJobs = scene.getOutstandingJobs();
     var perc = 100 - Math.round(outstandingJobs / totalJobs * 100);
-    // var newwidth = 170-(170 * (outstandingJobs / totalJobs))+20;
     var newwidth = 50 + 141 * perc / 100;
     if (newwidth < 30) newwidth = 30;
-    //console.log("updateProgressBar -- loaderbar "+newwidth+"px perc "+perc+" jobs "+outstandingJobs+"/"+totalJobs);
     $("#loaderbar").css("width", newwidth + "px");
 }
 
@@ -665,23 +648,23 @@ $(function () {
     $(".accordion h3#menu8").addClass("ui-state-disabled").off('click');
     $(".accordion h3#menu99").addClass("ui-state-disabled").off('click');
 });
-$(document).ready(function () {
 
+$(document).ready(function () {
 });
+
 var animStoped = true;
 var animCntrlBlock = true;
 $(window).load(function () {
     var fc = true;
+
     $(".menuitemsBase").click(function () {
         $("#panel").fadeToggle(200);
         autoPauseAllAnimations();
     });
 
     $(".menuitems").click(function () {
-        //                          if (!animStoped || (!clickEventActive)) return;
         if (!clickEventActive && !autoRotateState) return;
 
-        //						$( ".accordion" ).accordion( "option", "disabled", true );
         scene._nav._navMinDolly = 90;
         scene._nav._navMaxDolly = 250;
         setTimeout(Autoplayfive, 5000);
@@ -790,7 +773,6 @@ $(window).load(function () {
                 menu12Click();
                 break;
             case "menu20":
-                // $( ".accordion" ).accordion( "option", "active", false );
                 menu20Click();
                 break;
             case "menu10":
@@ -867,7 +849,6 @@ $(window).load(function () {
 });
 
 
-
 var firstAnim = true;
 function fadingEffect(selector) {
     //    animStoped = false;
@@ -878,7 +859,6 @@ function fadingEffect(selector) {
         $("#" + selector).animate({ width: i + "%" }, 0.5);
     }
 }
-
 
 function imgPreLoader() {
     $.preloadImages = function () {
@@ -906,10 +886,10 @@ function UiLoader() {
     $("#rightAnim img").attr("src", "./images_gl/right_popup.svg");
     $("#lenovo_logo img").attr("src", "./images_gl/Lenovo.svg");
 
-    $("#hotspot1plus.plus").attr("src", "./images_gl/NVMe/2X110.png");
-    $("#hotspot2plus.plus").attr("src", "./images_gl/NVMe/2X110.png");
-    $("#hotspot3plus.plus").attr("src", "./images_gl/NVMe/1.png");
-    $("#hotspot4plus.plus").attr("src", "./images_gl/NVMe/23X137.png");
+    $("#hotspot1plus.plus").attr("src","./images_gl/NVMe/23_60.png");
+    $("#hotspot2plus.plus").attr("src","./images_gl/NVMe/2X110.png");
+    $("#hotspot3plus.plus").attr("src","./images_gl/NVMe/23_60.png");
+    $("#hotspot4plus.plus").attr("src","./images_gl/NVMe/23_60.png");
     $("#hotspot52plus.plus").attr("src","./images_gl/NVMe/23_60.png");
     $("#hotspot62plus.plus").attr("src","./images_gl/NVMe/23_60.png");
     $("#hotspot72plus.plus").attr("src","./images_gl/NVMe/1.png");
@@ -921,15 +901,16 @@ function UiLoader() {
     $("#hotspot10plus.plus").attr("src", "./images_gl/PCIe/23X137.png");
     $("#hotspot11plus.plus").attr("src", "./images_gl/PCIe/23X137.png");
     $("#hotspot111plus.plus").attr("src", "./images_gl/PCIe/23X137.png");
+    $("#hotspot1111plus.plus").attr("src","./images_gl/PCIe/23X137.png");
     $("#hotspot112plus.plus").attr("src", "./images_gl/PCIe/23X137.png");
     $("#hotspot113plus.plus").attr("src", "./images_gl/PCIe/23X137.png");
-    $("#hotspot12plus.plus").attr("src", "./images_gl/NVMe/23_60.png");
-    $("#hotspot13plus.plus").attr("src", "./images_gl/NVMe/2X110.png");
-    $("#hotspot14plus.plus").attr("src", "./images_gl/NVMe/23_60.png");
-    $("#hotspot15plus.plus").attr("src", "./images_gl/NVMe/23_60.png");
-    $("#hotspot155plus.plus").attr("src", "./images_gl/NVMe/23_60.png");
-    $("#hotspot16plus.plus").attr("src", "./images_gl/NVMe/23_60.png");
-    $("#hotspot114plus.plus").attr("src", "./images_gl/NVMe/1.png");
+    $("#hotspot12plus.plus").attr("src","./images_gl/NVMe/23_60.png");
+    $("#hotspot13plus.plus").attr("src","./images_gl/NVMe/2X110.png");
+    $("#hotspot14plus.plus").attr("src","./images_gl/NVMe/23_60.png");
+    $("#hotspot15plus.plus").attr("src","./images_gl/NVMe/23_60.png");
+    $("#hotspot155plus.plus").attr("src","./images_gl/NVMe/23_60.png");
+    $("#hotspot16plus.plus").attr("src","./images_gl/NVMe/23_60.png");
+    $("#hotspot114plus.plus").attr("src","./images_gl/NVMe/1.png");
     $("#hotspot17plus.plus").attr("src", "./images_gl/PCIe/90X23.png");
     $("#hotspot18plus.plus").attr("src", "./images_gl/NVMe/23_60.png");
     $("#hotspot19plus.plus").attr("src", "./images_gl/PCIe/2X110.png");
@@ -972,7 +953,7 @@ function UiLoader() {
     $("#hotspot315plus.plus").attr("src", "./images_gl/PCIe/2X110.png");
     $("#hotspot316plus.plus").attr("src", "./images_gl/NVMe/90X23.png");
     $("#hotspot317plus.plus").attr("src", "./images_gl/PCIe/2X110.png");
-    $("#hotspot318plus.plus").attr("src", "./images_gl/PCIe/2X110.png");
+    $("#hotspot318plus.plus").attr("src", "./images_gl/PCIe/1.png");
     $("#hotspot319plus.plus").attr("src", "./images_gl/PCIe/2X110.png");
     $("#hotspot320plus.plus").attr("src", "./images_gl/NVMe/23X137.png");
     $("#hotspot321plus.plus").attr("src", "./images_gl/NVMe/23X137.png");
@@ -984,6 +965,16 @@ function UiLoader() {
     $("#hotspot415plus.plus").attr("src", "./images_gl/PCIe/2X110.png");
     $("#hotspot416plus.plus").attr("src", "./images_gl/NVMe/23_60.png");
     $("#hotspot417plus.plus").attr("src", "./images_gl/PCIe/2X110.png");
+
+
+    $("#hotspot91plus.plus").attr("src","./images_gl/PCIe/90X23.png");
+    $("#hotspot92plus.plus").attr("src","./images_gl/PCIe/90X23.png");
+    $("#hotspot93plus.plus").attr("src","./images_gl/PCIe/90X23.png");
+    $("#hotspot94plus.plus").attr("src","./images_gl/PCIe/23X119.png");
+    $("#hotspot95plus.plus").attr("src","./images_gl/PCIe/2X110.png");
+    $("#hotspot96plus.plus").attr("src","./images_gl/PCIe/2X110.png");
+    $("#hotspot97plus.plus").attr("src","./images_gl/NVMe/4.png");
+    $("#hotspot98plus.plus").attr("src","./images_gl/NVMe/1.png");
 
     $("#point10image1 img").attr("src", "./images_gl/lenovo-clarity.svg");
 
@@ -1011,7 +1002,6 @@ function UiLoader() {
 }
 
 function menuFading() {
-
 }
 
 function onSuperBlazeReady() {
@@ -1024,7 +1014,7 @@ function onSuperBlazeReady() {
     end = new Date().getTime();
     var time = end - start;
     if (time < 60000) {
-        //            RT_RecordTiming("Load", time, "ThinkSystem SR550");
+        // RT_RecordTiming("Load", time, "ThinkSystem SR550");
     }
     console.log('End time: ' + time);
 
@@ -1049,7 +1039,6 @@ function onSuperBlazeReady() {
         $("#point3Div").css('display', 'none');
         $("#point5Div").css('display', 'none');
         $("#transPatchDiv").css('display', 'none');
-        $("#point7Div").css('display', 'none');
         $("#HeadingDiv").css('display', 'none');
         if ((navigator.userAgent.indexOf('iPad') != -1) || (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0)) {
             //console.log("ie")
@@ -1075,7 +1064,6 @@ $(document).ready(function () {
             autoplayCatalog = false;
             $("#home").css("display", "none");
             $("#backText").css("display", "none");
-
         }
         $(window.parent).bind('resize', function () {
             resizePage(window.parent.innerWidth, window.parent.innerHeight);
@@ -1107,7 +1095,6 @@ $(document).ready(function () {
 });
 
 
-
 function SuperblazeStart(gl) {
     try {
         parent.document;
@@ -1129,17 +1116,12 @@ function SuperblazeStart(gl) {
     var is_firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 
     if ((navigator.userAgent.indexOf("iPhone") != -1) || ((navigator.userAgent.indexOf("Android") != -1) || (navigator.userAgent.indexOf("Mobile") != -1)) || (navigator.userAgent.indexOf('iPod') != -1)) {
-
-        //        scene = new infinityrt_scene(gl, "../v5/model_gl/", canvas.width, canvas.height);
-        scene = new infinityrt_scene(gl, "model_gl/", canvas.width, canvas.height);
+        scene = new infinityrt_scene({ rtgl: gl, useDraco: false }, "model_gl/", canvas.width, canvas.height, undefined, undefined, undefined, InitialSceneState, AllGeometryComplete);
         //console.log("mob");
-    } else {
-
-        //        scene = new infinityrt_scene(gl, "../v5/model_gl/", canvas.width, canvas.height);
-        scene = new infinityrt_scene(gl, "model_gl/", canvas.width, canvas.height);
-
+     } else {
+        scene = new infinityrt_scene({ rtgl: gl, useDraco: false }, "model_gl/", canvas.width, canvas.height, undefined, undefined, undefined, InitialSceneState, AllGeometryComplete);
         //console.log("desk");
-    }
+     }
     scene.fnLoadProgress = updateProgressBar;
     scene.start();
     scene._nav = new infinityrt_navigation(scene, canvas.width, canvas.height);
@@ -1154,31 +1136,34 @@ function SuperblazeStart(gl) {
         window.requestAnimationFrame(frameUpdate);
         $(this).bind("contextmenu", onRightClick); //prevents a right click     
         document.body.oncontextmenu = onRightClick;
-        //window.addEventListener('oncontextmenu',onRightClick,false);
-        //if (typeof(onInit()) != 'undefined') onInit();
     }
     initDragCursor();
 }
 var mob = (navigator.userAgent.indexOf("iPhone") != -1) || ((navigator.userAgent.indexOf("Android") != -1) || (navigator.userAgent.indexOf("Mobile") != -1)) || (navigator.userAgent.indexOf('iPod') != -1);
-
 var FullscreenOff = false;
 
 function launchFullscreen(element) {
-
 }
+var AllgeoIntl = false;
+var InHotspot = false;
+
+function InitialSceneState() {
+    InHotspot = true;
+    scene.groupApplyState('INTERNAL_HIDE');
+    scene.clearRefine();
+ }
+
+function AllGeometryComplete() {
+    AllgeoIntl = true;
+    console.log('All time: ' + (new Date().getTime() - start));
+ }
 
 function exitFullscreen() {
-
 }
 
 window.document.onkeyup = function (e) {
     // console.log("ECS pressed IE1");
     if (e.keyCode == 27) { // escape key maps to keycode `27`
-        // if(navigator.userAgent.indexOf('MSIE')!==-1 || navigator.appVersion.indexOf('Trident/') > 0){
-        //    // console.log("ECS pressed IE");
-        // }
-        // console.log("ECS pressed"); 
-        // exitFullscreen(window.parent.document.documentElement);
         var iE = 0;
         var _intervalEsc = setInterval(function () {
             if (iE < 5) {
@@ -1306,7 +1291,6 @@ function resizePage(width, height) {
     });
 }
 
-
 function addMouseListeners(canvas) {
     canvas.addEventListener('mousemove', mouseMove, false);
     canvas.addEventListener('mousedown', mouseDown, false);
@@ -1318,9 +1302,8 @@ function addMouseListeners(canvas) {
     canvas.addEventListener('touchmove', touchMove, false);
     canvas.addEventListener('touchend', touchEndCan, false);
     //  document.getElementById('rightAnim').addEventListener('mousedown', rightAnimClick, false);
-    document.getElementById("home").addEventListener("mousedown", closeSuperblaze);
+    // document.getElementById("home").addEventListener("mousedown", closeSuperblaze);
 }
-
 
 var rightAnimToggle = true;
 var animblockStopped = true;
@@ -1350,6 +1333,7 @@ function mouseDownHide() {
     $("#point8image1").css("opacity", "0");
 
 }
+
 function mouseWheelHide() {
     $("#point17text").css('display', 'none');
     $("#point19text").css('display', 'none');
@@ -1384,7 +1368,6 @@ function mouseWheelHide() {
     $("#hotspot6").css('display', 'none');
     $("#hotspot7").css('display', 'none');
     $("#point6text9").css('display', 'none');
-    $("#point7Div").css('display', 'none');
     $("#point12text").css('display', 'none');
     $("#point11text").css('display', 'none');
     $("#point111text").css('display', 'none');
@@ -1392,8 +1375,8 @@ function mouseWheelHide() {
     $("#point20text").css('display', 'none');
     
 }
+
 function divHide() {
-   
 }
 
 function objectHide() {
@@ -1405,7 +1388,9 @@ function objectHide() {
     scene.animPlayInTime("STATUS_DASHBOARD",0,1);
     scene.animPlayInTime("Net_Screen",0,1);
     
-    scene.groupApplyState('REMOTE_WIRE_OFF');
+    // scene.groupApplyState('REMOTE_WIRE_OFF');
+    // scene.groupApplyState('Remote_with_Cable_OFF');
+    scene.groupApplyState('Wire_Hide');
     scene.groupApplyState('Remote_only_off');
     scene.groupApplyState('Remote_hide');
     scene.groupApplyState('Top_Cover_on');
@@ -1484,22 +1469,20 @@ function menu2Click() {
 
 }
 
-
 function menu3Click() {
     console.log("menu3_click");
-    //  objectsHidenew();
     animStoped = false;
     objectHide();
     scene.groupApplyState('Server_show_new');
     $("#cpHeading").text("2.5-inch Drive Configuration");
     $("#cpHeading").show();
-    $("#onloadCopy").css("opacity", "0").fadeOut(400);
+    $("#onloadCopy").css('display','none');
+
     $("#menu4").removeClass("active");
     $("#menu4 .greyOutBox").addClass("redOutBox");
 
     scene.groupApplyState('Storage_Rich_Configuation');
     scene.groupApplyState('Front_Panel_B_Vertical_HDD');
- 
  
     //check ref
     scene.groupApplyState('REMOTE_WIRE_OFF');
@@ -1514,6 +1497,7 @@ function menu3Click() {
     scene.groupApplyState("GP_ON");
     scene.gotoPosInTime(6.216692405045265, 0.005304073464102062, 1.4692997072480447, -1.3848181741363663, 175.14432637717911, 1000, function () {
         $("#point19text").css('display', 'block');
+        $(".cur").css('display', 'block');
 
     });
     timeouts.push(setTimeout(function () {
@@ -1565,6 +1549,7 @@ function menu4Click() {
 
     scene.gotoPosInTime(6.216692405045265, 0.005304073464102062, 1.4692997072480447, -1.3848181741363663, 175.14432637717911, 1000, function () {
         $("#point19text").css('display', 'block');
+        $(".cur").css('display', 'block');
         animComplete();
     });
     timeouts.push(setTimeout(function () {
@@ -1578,8 +1563,6 @@ function menu4Click() {
     scene.clearRefine();
 
 }
-
-
 
 function menu5Click() {
     console.log("menu5_click");
@@ -1659,7 +1642,6 @@ function menu6Click() {
     scene.clearRefine();
 }
 
-
 var ScreenAnimInterval2;
 var animCounter2 = 0;
 
@@ -1672,7 +1654,7 @@ function menu16Click() {
     animStoped = false;
     $("#cpHeading").html("External Diagnostics Handset");
     $("#cpHeading").show();
-    $("#onloadCopy").css("opacity", "0").fadeOut(400);
+    $("#onloadCopy").css('display','none');
     $("#menu6").addClass('active');
     $("#menu16").removeClass("disabled");
     $("#menu16").removeClass('active');
@@ -1723,15 +1705,10 @@ function menu16Click() {
         if (autoplayAnim) {
            animCompeteAuto();
         } 
-        // else {
-        //    animComplete();
-        // }
      },6000));
      animComplete();
     scene.clearRefine();
 }
-
-
 
 function menu7Click() {
     console.log("menu7_click");
@@ -1753,7 +1730,8 @@ function menu7Click() {
     scene.groupApplyState('Front_Panel_A_Horizontal_HDD');
 
     scene.gotoPosInTime(6.216692405045265, 0.005304073464102062, 1.4692997072480447, -1.3848181741363663, 175.14432637717911, 1000, function () {
-        $("#point7Div,#hotspot52,#hotspot62,#hotspot72").css('display', 'block');
+        $("#point4text").css('display', 'block');
+        $(".cur").css('display', 'block');
     });
     animComplete();
     timeouts.push(setTimeout(function () {
@@ -1774,11 +1752,18 @@ function menu13Click() {
     $("#menu13").removeClass("active");
     $("#menu13 .greyOutBox").addClass("redOutBox");
     objectHide();
+    scene.groupApplyState('Server_show_new');
+    scene.groupApplyState('Card_Show');
+    scene.groupApplyState('Top_Cover_ON');
+    scene.groupApplyState('3.5_Inch_Drive_ON');
+    scene.groupApplyState("GP_ON");
+    scene.groupApplyState("REF_HORIZONTAL");
+    scene.groupApplyState("3.5_inch_Drive_Configuation");
     scene.groupApplyState('Front_Panel_A_Horizontal_HDD');
-    scene.groupApplyState('3.5_Inch_Drive_Configuration');
 
     scene.gotoPosInTime(6.216692405045265, 0.005304073464102062, 1.4692997072480447, -1.3848181741363663, 175.14432637717911, 1000, function () {
-        $("#point7Div,#hotspot4040,#hotspot5050,#hotspot6060").css('display', 'block');
+        $("#point4text").css('display', 'block');
+        $(".cur").css('display', 'block');
         animComplete();
     });
     timeouts.push(setTimeout(function () {
@@ -1813,19 +1798,23 @@ function menu14fadeOut() {
     $("#div8line").css('display', 'none').animate({ 'height': '0px' }, 10);
 }
 
-
-
 function menu8Click() {
     console.log("menu8click");
     animStoped = false;
-    $("#onloadCopy").css("opacity", "0").fadeOut(400);
+    $("#onloadCopy").css('display','none');
     $("#cpHeading").text("3.5-inch Drive Configuration-Rear View");
     $("#menu7").addClass('active');
     $("#menu8").removeClass('active');
     $("#menu8 .greyOutBox").addClass('redOutBox');
     objectHide();
+    scene.groupApplyState('Server_show_new');
+    scene.groupApplyState('Card_Show');
+    scene.groupApplyState('Top_Cover_ON');
+    scene.groupApplyState('3.5_Inch_Drive_ON');
+    scene.groupApplyState("GP_ON");
+    scene.groupApplyState("REF_HORIZONTAL");
+    scene.groupApplyState("3.5_inch_Drive_Configuation");
     scene.groupApplyState('Front_Panel_A_Horizontal_HDD');
-    scene.groupApplyState('3.5_Inch_Drive_Configuration');
     scene.gotoPosInTime(3.1228533775245864, 0.024000652723075104, 0.014641735671303, -1.3848181741363663, 165.14432637717911, 1000, function () {
         $("#point8text").css('display', 'block');
         $(".cur").css('display', 'block');
@@ -1856,8 +1845,7 @@ function menu9Click() {
     scene.groupApplyState('Front_Panel_A_Horizontal_HDD');
     scene.groupApplyState('INTERNAL_ON');
     scene.groupApplyState('Top_Cover_OFF');
-    scene.groupApplyState('3.5_inch');
-    scene.groupApplyState('3.5_Inch_Drive_Configuration');
+    scene.groupApplyState('3.5_inch_Drive_Configuation');
     scene.groupApplyState('Extra_part_OFF');
 
     scene.gotoPosInTime(5.562946856604739,0.4531939058193576,-1.7956863385817967,4.393360640626445,210, 1000, function () {
@@ -1866,7 +1854,8 @@ function menu9Click() {
         scene.animPlayInTime("NVME_back", 0.83, 1000);
         scene.animPlayInTime("Handel_metal", 0.83, 1000);
         timeouts.push(setTimeout(function () {
-            $("#point12text").fadeIn(400);
+            $("#point12text").css('display', 'block');
+            $(".cur").css('display', 'block');
             translateIn(12);
             animComplete();
         }, 700));
@@ -1881,7 +1870,6 @@ function menu9Click() {
     }, 2500));
     scene.clearRefine();
 }
-
 
 var menu10clicked = false;
 var a;
@@ -1920,8 +1908,10 @@ function menu11Fadeout() {
     $('#point13text8 span,.point13click img').removeAttr('style');
     $(".point13textContent").fadeOut(1);
 }
+
 var menu11Clicked = false;
 var notrepeat = true;
+
 function menu11Click() {
     console.log("menu11Clicked");
     objectHide();
@@ -1961,6 +1951,7 @@ function menu11Click() {
     top_cover = true;
     scene.clearRefine();
 }
+
 function point11anim1() {
     timeouts.push(setTimeout(function () {
         $("#point13text1,#point13text1SubContent").fadeOut(100);
@@ -2269,6 +2260,7 @@ function point11anim7() {
         }
     }, 6050));
 }
+
 var top_cover = true;
 
 function menu12Click() {
@@ -2280,7 +2272,6 @@ function menu12Click() {
     objectHide();
     scene.groupApplyState('Server_show_new');
     scene.groupApplyState('Front_Pannel_Vertical');
-    scene.groupApplyState('Storage _Rich_Configuation');
     scene.groupApplyState('Internal_on');
     scene.groupApplyState('Top_Cover_OFF');
 
@@ -2316,7 +2307,7 @@ function menu14Click() {
     console.log("menu_14_clicked");
     $("#cpHeading").html("Interior of 2.5-inch Drive Configuration");
     $("#cpHeading").show();
-    $("#onloadCopy").css("opacity", "0").fadeOut(400);
+    $("#onloadCopy").css('display','none');
     $("#menu3").addClass('active');
     $("#menu14").addClass('active');
     $("#menu14").removeClass("disabled");
@@ -2377,7 +2368,7 @@ function menu17Click() {
 
 function menu18Click() {
     console.log("menu18Clicked");
-    $("#onloadCopy").css("opacity", "0").fadeOut(400);
+    $("#onloadCopy").css('display','none');
     animStoped = false;
     $("#cpHeading").text("Rear View");
     $("#cpHeading").show();
@@ -2423,7 +2414,7 @@ function menu20Click() {
     objectHide();
     scene.groupApplyState('Server_show_new');
     scene.groupApplyState('Front_Pannel_Vertical');
-    scene.groupApplyState('Storage _Rich_Configuation');
+    scene.groupApplyState('Storage_Rich_Configuation');
     scene.groupApplyState('Internal_on');
     scene.groupApplyState('Top_Cover_OFF');
 
@@ -2516,13 +2507,10 @@ function autoPlayAllAnimations() {
         clearTimeout(timeouts[i]);
     }
     timeouts = [];
-
     for (var i = 0; i < timeoutsnew.length; i++) {
         clearTimeout(timeoutsnew[i]);
     }
     timeoutsnew = [];
-
-
     firstAnim = true;
     autoplayAnim = true;
 
@@ -2531,7 +2519,6 @@ function autoPlayAllAnimations() {
     $("#pauseplayImg").css("display", "none");
     $("#pauseplayImg2").css("display", "block");
     $("#pauseplayImg2 img").attr("src", "./images_gl/Pause.svg").css("height", "40px");
-
 
     if (currneAnim < 22) {
         console.log("currneAnim" + currneAnim);
@@ -2613,10 +2600,8 @@ function autoPlayAllAnimations() {
         currneAnim = 2;
         AutoPlayMenus(currneAnim);
     }
-
     console.log("play", currneAnim);
 }
-
 
 function autoPauseAllAnimations() {
     console.log("pause");
@@ -2640,13 +2625,13 @@ function autoPauseAllAnimations() {
 
     }
     clearTimeout(autoPlayInt);
-
     setTimeout(function () {
         animComplete();
     }, 2000);
 }
 
 var autoPlayInt
+
 function animCompeteAuto() {
     console.log("calleAuto");
     autoPlayInt = setTimeout(function () {
@@ -2744,10 +2729,11 @@ function animComplete() {
 
 function reversAll() {
 }
+
 var imgInterval;
+
 function clearInt() {
     clearInterval(imgInterval);
-    // $("#imageContainerimg").attr('src','');
     $("#imageContainerimg").attr('src', 'images_gl/ring_animation/1.png');
     $("#imageContainerimg").css("display", "none");
 }
@@ -2817,7 +2803,7 @@ function frameUpdate() {
     }
 
     //console.log(scene._nav._navYAng+","+scene._nav._navXAng+","+scene._nav._navPan[0]+","+scene._nav._navPan[1]+","+scene._nav._navDolly);
-    //   
+
     if (yPos < yEnd && mdown != true && yStarted) {
         autoRotateState = true;
         if (yPos > yEnd - 2) yPos = 0;
@@ -2827,9 +2813,7 @@ function frameUpdate() {
             numberOfAA = 1;
         }
         numberOfAA++;
-        //						}
     } else yStarted = false;
-
 
     if (rotating[0] != 0 || rotating[1] != 0) {
         if (rSpeed < 0) {
@@ -2851,14 +2835,11 @@ function frameUpdateForScene(scene) {
     scene.setViewMatrix(sceneViewMatrix);
     scene.setModelMatrix(scene._nav.NavCreateModelMatrix(scene._initialNavMatrix));
     drawn = scene.draw();
-
     if (bgotoPosInTimeUpdate)
         scene.clearRefine();
-    if (drawn) hotspotPosAsignment();
-
-
-
+    if (drawn && AllgeoIntl) hotspotPosAsignment();
 }
+
 function getScene(ev) {
     var s = scene;
     if (scene2 != null && ev.currentTarget == canvas2)
@@ -2879,7 +2860,6 @@ var autoRotateInterval;
 
 function autoRotate() {
     if ((navigator.userAgent.indexOf("iPhone") != -1) || ((navigator.userAgent.indexOf("Android") != -1) || (navigator.userAgent.indexOf("Mobile") != -1)) || (navigator.userAgent.indexOf('iPad') != -1) || (navigator.userAgent.indexOf('iPod') != -1)) {
-        // no rotation 
         animStoped = true;
         scene._navEnabled = true;
     }
@@ -2890,7 +2870,6 @@ function autoRotate() {
         }
     }
 }
-
 
 var autoRotateInterval;
 function autoRotateStop() {
@@ -2904,7 +2883,6 @@ function autoRotateStop() {
 
 function autoRotateRequest(ev) {
     var s = getScene(ev);
-
     yStarted = true;
     yPos += 0.5;
     var mpos = [0.0, 0.0];
@@ -2924,8 +2902,6 @@ function autoRotateCall() {
 /*end*/
 
 
-
-
 var hotspotPoint = true;
 var hotspotOn;
 var clockWise = true;
@@ -2935,14 +2911,13 @@ function hotspotPosAsignment() {
     InHotspot = true;
     var viewCameraZV = [sceneViewMatrix[8],sceneViewMatrix[9],sceneViewMatrix[10]];
     var hotspotopacityspeed = 3.0;
-    if (sceneViewMatrix[14] > 1.6 && sceneViewMatrix[14] < 9 && sceneViewMatrix[12] > 16 && sceneViewMatrix[12] < 120) {
-       $('#hotspot1,#hotspot2,#hotspot3,#hotspot4,#hotspot12,#hotspot13,#hotspot14,#hotspot15,#hotspot16,#hotspot114').css('display','block');
-    }
+    // if (sceneViewMatrix[14] > 1.6 && sceneViewMatrix[14] < 9 && sceneViewMatrix[12] > 16 && sceneViewMatrix[12] < 120) {
+    //    $('#hotspot1,#hotspot2,#hotspot3,#hotspot4,#hotspot12,#hotspot13,#hotspot14,#hotspot15,#hotspot16,#hotspot114').css('display','block');
+    // }
  
-    if (sceneViewMatrix[14] > 1 && sceneViewMatrix[14] < 8 && sceneViewMatrix[12] > 10 && sceneViewMatrix[12] < 83) {
-       $('#hotspot5,#hotspot6,#hotspot7,#hotspot8,#hotspot9,#hotspot10,#hotspot11,#hotspot111, #hotspot1111, #hotspot11111').css('display','block');
-    }
- 
+    // if (sceneViewMatrix[14] > 1 && sceneViewMatrix[14] < 8 && sceneViewMatrix[12] > 10 && sceneViewMatrix[12] < 83) {
+    //    $('#hotspot5,#hotspot6,#hotspot7,#hotspot8,#hotspot9,#hotspot10,#hotspot11,#hotspot111, #hotspot1111, #hotspot11111').css('display','block');
+    // }
  
     var pos2Dpoint5 = [];
     var norm3Dpoint5 = scene.getObjectNormal("Front_hotspot_01");
@@ -2973,7 +2948,6 @@ function hotspotPosAsignment() {
     if (hotspotopacity7 == 0) $("#hotspot14",window.document).css('visibility','hidden');
     else $("#hotspot14",window.document).css('visibility','visible');
     pos2Dpoint7 = scene.projectPoint(scene.getObjectLocation("Front_hotspot_07",true));
- 
  
     var pos2Dpoint8 = [];
     var norm3Dpoint8 = scene.getObjectNormal("Front_hotspot_0");//29
@@ -3205,7 +3179,6 @@ function hotspotPosAsignment() {
     else $("#hotspot94",window.document).css('visibility','visible');
     pos2Dpoint43 = scene.projectPoint(scene.getObjectLocation("Rear_hotspot_07",true));
  
- 
     // //new added 7
     var pos2Dpoint311 = [];
     var norm3Dpoint311 = scene.getObjectNormal("Rear_hotspot_04"); //17
@@ -3287,7 +3260,6 @@ function hotspotPosAsignment() {
     var leftPosPoint41 = (pos2Dpoint41[0] * 50) + 50;
     var leftPosPoint42 = (pos2Dpoint42[0] * 50) + 50;
     var leftPosPoint43 = (pos2Dpoint43[0] * 50) + 50;
- 
  
     var leftPosPoint311 = (pos2Dpoint311[0] * 50) + 50;
     var leftPosPoint312 = (pos2Dpoint312[0] * 50) + 50;
@@ -3379,6 +3351,7 @@ var mpos = [0, 0];
 var mdown = false;
 var panNav = false;
 var prevAnimation = null;
+
 function mouseDown(ev) {
     if (!animStoped) return;
     console.log("mouse fun call");
@@ -3398,7 +3371,6 @@ function mouseDown(ev) {
     }
     timeouts = [];
     timeoutsnew = [];
-    //for (var j = 1; j <= 13; j++) {if(j ==3 || j ==6 || j ==7 || j ==8){}else{translateOut(j);}}
 
     if (autoplayAnim) autoPauseAllAnimations();
     var s = getScene(ev);
@@ -3436,7 +3408,6 @@ function mouseMove(ev) {
     var mousePos = [ev.clientX - canvas.offsetLeft, ev.clientY - canvas.offsetTop];
     var mdelta = [(mpos[0] - mousePos[0]), (mpos[1] - mousePos[1])];
     mpos = [mousePos[0], mousePos[1]];
-    //pan nav is initialized and set in ui\_ui.js for now.
     if (!panNav) {
         if (s._nav.NavRotation(mpos, mdelta)) s.clearRefine();
     } else {
@@ -3460,19 +3431,14 @@ function mouseWheel(ev) {
     clearTimeout(myVar);
     autoRotateStop();
     clearTimeout(startAutorot);
-
-    //for (var j = 1; j <= 13; j++) {if(j ==8|| j ==13 ||j ==10 || j==5 ){}else{translateOut(j);}}  
     divHide();
     if (autoplayAnim) autoPauseAllAnimations();
-    //     reversAll();
     var s = getScene(ev);
     var delta = ev.wheelDelta ? ev.wheelDelta : (-ev.detail * 10.0);
-    //var deltaScene = (delta*0.05)*(scene.sceneRadius*0.01);
     var deltaScene = delta * 0.06;
     if (s._nav.NavChangeDolly(deltaScene))
         s.clearRefine();
 }
-
 
 function updateZoomBarBg(newval) {
     var scale = -(navMinDolly - navMaxDolly);
@@ -3721,16 +3687,12 @@ function parseXml() {
                 $('#pointtext1 #Cp_text_11').append(point1_11);
                 var point1_12 = $(this).find('point1text12').text();
                 $('#pointtext1 #Cp_text_12').append(point1_12);
-
                 var point1_13 = $(this).find('point1text13').text();
                 $('#pointtext1 .Cp_textul li:nth-child(1)').html(point1_13);
-
                 var point1_14 = $(this).find('point1text14').text();
                 $('#pointtext1 .Cp_textul li:nth-child(2)').html(point1_14);
-
                 var point1_15 = $(this).find('point1text15').text();
                 $('#pointtext1 .Cp_textul li:nth-child(3)').html(point1_15);
-
                 var point1_16 = $(this).find('point1text16').text();
                 $('#pointtext1 .Cp_textul li:nth-child(4)').html(point1_16);
 
@@ -3745,28 +3707,35 @@ function parseXml() {
                 var point3_1 = $(this).find('headingText').text();
                 $('#point3text .point3headingText').append(point3_1);
 
-                var point3_2 = $(this).find('point3text1').text();
-                $('#point3text #hot1').append(point3_2);
-
-                var point3_3 = $(this).find('point3text2').text();
-                $('#point3text #hot2').append(point3_3);
-
-                var point3_4 = $(this).find('point3text3').text();
-                $('#point3text #hot3').append(point3_4);
-
-                var point3_5 = $(this).find('point3text4').text();
-                $('#point3text #hot4').append(point3_5);
-
-                var point3_6 = $(this).find('point3text5').text();
-                $('#point3text #hot5').append(point3_6);
-
-                var point3_7 = $(this).find('point3text6').text();
-                $('#point3text #hot6').append(point3_7);
+                // var point3_2 = $(this).find('point3text1').text();
+                // $('#point3text #hot1').append(point3_2);
+                // var point3_3 = $(this).find('point3text2').text();
+                // $('#point3text #hot2').append(point3_3);
+                // var point3_4 = $(this).find('point3text3').text();
+                // $('#point3text #hot3').append(point3_4);
+                // var point3_5 = $(this).find('point3text4').text();
+                // $('#point3text #hot4').append(point3_5);
+                // var point3_6 = $(this).find('point3text5').text();
+                // $('#point3text #hot5').append(point3_6);
+                // var point3_7 = $(this).find('point3text6').text();
+                // $('#point3text #hot6').append(point3_7);
             });
 
             $(document).find("point4text").each(function () {
-                var point4_0 = $(this).find('point4heading').text();
-                $('.point4headingText').append(point4_0);
+                var point4_1 = $(this).find('point4text1').text();
+                $('#point4text #hot1').append(point4_1);
+                var point4_2 = $(this).find('point4text2').text();
+                $('#point4text #hot2').append(point4_2);
+                var point4_3 = $(this).find('point4text3').text();
+                $('#point4text #hot3').append(point4_3);
+                var point4_4 = $(this).find('point4text4').text();
+                $('#point4text #hot4').append(point4_4);
+                var point4_5 = $(this).find('point4text5').text();
+                $('#point4text #hot52').append(point4_5);
+                var point4_6 = $(this).find('point4text6').text();
+                $('#point4text #hot62').append(point4_6);
+                var point4_7 = $(this).find('point4text7').text();
+                $('#point4text #hot72').append(point4_7);
 
             });
 
@@ -3793,21 +3762,14 @@ function parseXml() {
             $(document).find("pointtext6").each(function () {
                 var point6_11 = $(this).find('point6heading').text();
                 $('.point6headingText').append(point6_11);
-
-
                 var point6_3 = $(this).find('point6text3').text();
                 $('#hot13').html(point6_3);
-
                 var point6_4 = $(this).find('point6text4').text();
                 $('#hot14').html(point6_4);
-
                 var point6_5 = $(this).find('point6text5').text();
                 $('#hot15').html(point6_5);
-
                 var point6_6 = $(this).find('point6text6').text();
                 $('#hot16').html(point6_6);
-
-
                 var point6_12 = $(this).find('point6text12').text();
                 $('#hot22').html(point6_12);
             });
@@ -3835,7 +3797,22 @@ function parseXml() {
             });
 
             $(document).find("point8text").each(function () {
-
+                var point8_1 = $(this).find('point8text1').text();
+                $('#point8text #hot91').append(point8_1);
+                var point8_2 = $(this).find('point8text2').text();
+                $('#point8text #hot92').append(point8_2);
+                var point8_3 = $(this).find('point8text3').text();
+                $('#point8text #hot93').append(point8_3);
+                var point8_4 = $(this).find('point8text4').text();
+                $('#point8text #hot94').append(point8_4);
+                var point8_5 = $(this).find('point8text5').text();
+                $('#point8text #hot95').append(point8_5);
+                var point8_6 = $(this).find('point8text6').text();
+                $('#point8text #hot96').append(point8_6);
+                var point8_7 = $(this).find('point8text7').text();
+                $('#point8text #hot97').append(point8_7);
+                var point8_8 = $(this).find('point8text8').text();
+                $('#point8text #hot98').append(point8_8);
             });
 
 
@@ -3936,7 +3913,20 @@ function parseXml() {
 
             });
             $(document).find("point19text").each(function () {
-
+                var point19_1 = $(this).find('point19text1').text();
+                $('#point19text #hot12').append(point19_1);
+                var point19_2 = $(this).find('point19text2').text();
+                $('#point19text #hot13').append(point19_2);
+                var point19_3 = $(this).find('point19text3').text();
+                $('#point19text #hot14').append(point19_3);
+                var point19_4 = $(this).find('point19text4').text();
+                $('#point19text #hot15').append(point19_4);
+                var point19_5 = $(this).find('point19text5').text();
+                $('#point19text #hot16').append(point19_5);
+                var point19_6 = $(this).find('point19text6').text();
+                $('#point19text #hot155').append(point19_6);
+                var point19_7 = $(this).find('point19text7').text();
+                $('#point19text #hot114').append(point19_7);
 
             });
 
@@ -3952,25 +3942,7 @@ function parseXml() {
 
             $(document).find("point14text").each(function () {
                 var point14_1 = $(this).find('point14text1').text();
-                $('#point14text .point14text1').append(point14_1);
-
-                var point14_2 = $(this).find('point14text2').text();
-                $('#point14text .point14text2').append(point14_2);
-
-                var point14_3 = $(this).find('point14text3').text();
-                $('#point14text .point14text3').append(point14_3);
-
-                var point14_4 = $(this).find('point14text4').text();
-                $('#point14text .point14text4').append(point14_4);
-
-                var point14_li1 = $(this).find('point14_li1').text();
-                $('#point14text ul li:nth-child(1)').append(point14_li1);
-                var point14_li2 = $(this).find('point14_li2').text();
-                $('#point14text ul li:nth-child(2)').append(point14_li2);
-                var point14_li3 = $(this).find('point14_li3').text();
-                $('#point14text ul li:nth-child(3)').append(point14_li3);
-                var point14_li4 = $(this).find('point14_li4').text();
-                $('#point14text ul li:nth-child(4)').append(point14_li4);
+                $('#point14text #point14text1').append(point14_1);
             });
             $(document).find("point12text").each(function () {
                 var point12_1 = $(this).find('point12text1').text();
@@ -4173,9 +4145,9 @@ function Autoplayfive() {
         console.log("autoFive");
         $(".playAll").trigger("click");
 
-        AutoplayRackInnerNew = setTimeout(function () {
-            parent.AutoplayRackInner();
-        }, autoBackTimer);
+        // AutoplayRackInnerNew = setTimeout(function () {
+        //     parent.AutoplayRackInner();
+        // }, autoBackTimer);
     }, autoServerTimer));
 }
 

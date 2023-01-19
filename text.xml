@@ -112,32 +112,40 @@
 		 
 		 
       <point4text>
-         <point4heading>
-             <![CDATA[ Optional Diagnostic Panel
-             ]]>
-         </point4heading>
-       
          <point4text1>
-             <![CDATA[ Network LED
+             <![CDATA[Optional External Diagnostics Port 
              ]]>
          </point4text1>
-         <point4text2>
-            <![CDATA[ ID Button/ LED
-            ]]>
-         </point4text2>
-          <point4text3>
-            <![CDATA[ System error LED
-            ]]>
-         </point4text3>
-          <point4text4>
-            <![CDATA[ Power button/ LED 
-            ]]>
-         </point4text4>
-          <point4text5>
-            <![CDATA[ 2-line System Status Panel utilizes both front-facing LEDs and a pop-out LCD panel to provide VPD, IP,  environmental and system error information.
-            ]]>
-         </point4text5>       
           
+            <point4text2>
+            <![CDATA[Optional VGA port   
+            ]]>
+           </point4text2>
+          
+           <point4text3>
+             <![CDATA[ Pull-out information tag 
+             ]]>  
+           </point4text3>
+          
+           <point4text4>
+              <![CDATA[ USB 3.1 Gen 1 port 
+              ]]>    
+           </point4text4>
+          
+           <point4text5>
+              <![CDATA[  USB port 2.0 with XCC management 
+              ]]>    
+           </point4text5>
+
+           <point4text6>
+              <![CDATA[ Operator panel 
+              ]]>    
+           </point4text6>
+          
+          <point4text7>
+              <![CDATA[ Up to 12x 3.5-inch  hot-swap  drive  bays (SAS/SATA or AnyBay)
+              ]]>    
+           </point4text7>
     </point4text>
 		 
  <point5text>
@@ -257,38 +265,38 @@
        
       
      <point8text>
-         <point8text1>
-              <![CDATA[ External Diagnostics Port   
-              ]]>
+        <point8text1>
+             <![CDATA[ OCP 3.0 slot 
+             ]]>
          </point8text1>
          <point8text2>
-             <![CDATA[Optional VGA port
-
+             <![CDATA[ XCC Management port
              ]]>
          </point8text2>
          <point8text3>
-             <![CDATA[ Pull-out information tag
-
+             <![CDATA[  2x USB 3.1 G1 ports
              ]]>
          </point8text3>
          <point8text4>
-             <![CDATA[ USB 3.1 Gen 1 port
-
+             <![CDATA[ Video port
              ]]>
          </point8text4>
          <point8text5>
-             <![CDATA[Operator panel
+             <![CDATA[USB 3.1 G1 port
              ]]>
-         </point8text5>.
-         
-          <point8text6>
-            <![CDATA[ Maximum 2.5" drive configuration: 32x 2.5" SAS/SATA/NVMe 24(F)+8(M)+4(R): 
-                      **up to 32 drives due to SGPIO limitation
+         </point8text5>
+         <point8text6>
+             <![CDATA[ NMI
              ]]>
-          </point8text6>
-           <point8text7>
-            <![CDATA[UP to 24x 2.5-inch drives (SAS/SATA, NVMe or AnyBay)]]>
+         </point8text6>
+         <point8text7>
+             <![CDATA[ 2x Hot-swap power supply
+             ]]>
          </point8text7>
+        <point8text8>
+            <![CDATA[ 4x 3.5-inch hot-swap drive bays with 2 slots (as shown). The configuration also supports 2x 3.5-inch hot-swap drive bays with 4 slots, or no rear drive bays and 8 slots. Also supports 2x 7mm hot-swap drive bays instead of one of the lower slots. 
+            ]]>
+        </point8text8> 
           
        </point8text>
        
@@ -373,14 +381,15 @@
 
 	    <point12text>
          <point12text1>
-             <![CDATA[ The unique design of this server accommodates a mid-chassis drive cage for up to 4x 3.5-inch. hot-swap drives.
+             <![CDATA[ The design of the 3.5-inch drive configuration includes support for a mid-chassis drive cage of 4x 3.5-inch hot-swap drives. The cage rotates upwards to allow easy access to the drives.
+
              ]]>
          </point12text1>
       </point12text> 
        
         <point13text>
           <point13text1>
-            <![CDATA[ "Simplify your IT transformation and grow your business your way"
+            <![CDATA[ Simplify your IT transformation and grow your business your way
             <span>In today's world,  change can happen  overnight.  Lenovo's Solution  Services Group  offers a complete suite of answers to even your  most  challenging business questions.</span>
             ]]>
          </point13text1>
@@ -475,7 +484,13 @@
             ]]>
          </point13_li4_2>
       </point13text>
-	   
+
+	   <point14text>
+        <point14text1>
+          <![CDATA[The design of the 2.5-inch drive configuration includes support for a mid-chassis drive cage of 8x 2.5-inch hot-swap drives. The cage rotates upwards to allow easy access to the drives.  
+        ]]>
+        </point14text1>
+     </point14text>
 
 <point15text>
          <point15text1>
@@ -506,9 +521,37 @@
         </point18text1>
       </point18text>
        <point19text>
-        <point19text1>
-          <![CDATA[ All configurations have a special port to connect an External Diagnostics Handset with an LCD display.]]>
-        </point19text1>
+          <point19text1>
+                <![CDATA[ Optional External Diagnostics Port   
+                ]]>
+          </point19text1>
+          <point19text2>
+              <![CDATA[Optional VGA port
+
+              ]]>
+          </point19text2>
+          <point19text3>
+              <![CDATA[ Pull-out information tag
+
+              ]]>
+          </point19text3>
+          <point19text4>
+              <![CDATA[ USB 3.1 Gen 1 port
+
+              ]]>
+          </point19text4>
+          <point19text5>
+              <![CDATA[Operator panel
+              ]]>
+          </point19text5>.
+          
+            <point19text6>
+              <![CDATA[ USB port 2.0 with XCC management
+              ]]>
+            </point19text6>
+        <point19text7>
+              <![CDATA[Up to 24x 2.5-inch  hot-swap  drive  bays (SAS/SATA, NVMe or AnyBay)]]>
+          </point19text7>
       </point19text>
         <point20text>
         <point20text1>

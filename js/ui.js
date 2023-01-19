@@ -89,7 +89,7 @@ function showScene() {
     $("#ButtonController").css("opacity", "1");
     startAutorot = setTimeout(function () {
         autoRotateCall();
-        console.log("autoRotateCall");
+        // console.log("autoRotateCall");
     }, 4000);
     setTimeout(function () {
         $("#zoom_slider").slider("option", "value", 120);
