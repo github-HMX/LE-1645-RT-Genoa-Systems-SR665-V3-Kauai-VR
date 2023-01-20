@@ -869,7 +869,6 @@ function imgPreLoader() {
 
     $.preloadImages(
         "./images_gl/Play.svg",
-        "./images_gl/right_popup.svg",
         "./images_gl/Lenovo.svg",
 
     );
@@ -880,10 +879,8 @@ function UiLoader() {
     $("#hamb img").attr("src", "./images_gl/hamburger.png");
     $("#resetBtn img").attr("src", "./images_gl/reset.svg");
     $("#lenovo_logo img").attr("src", "./images_gl/Lenovo.svg");
-    $("#rightAnim img").attr("src", "./images_gl/right_popup.svg");
     $("#pauseplayImg img").attr("src", "./images_gl/Play.svg");
     $("#pauseplayImg img").attr("src", "./images_gl/Play.svg");
-    $("#rightAnim img").attr("src", "./images_gl/right_popup.svg");
     $("#lenovo_logo img").attr("src", "./images_gl/Lenovo.svg");
 
     $("#hotspot1plus.plus").attr("src","./images_gl/NVMe/23_60.png");
@@ -894,7 +891,7 @@ function UiLoader() {
     $("#hotspot62plus.plus").attr("src","./images_gl/NVMe/23_60.png");
     $("#hotspot72plus.plus").attr("src","./images_gl/NVMe/1.png");
     $("#hotspot5plus.plus").attr("src", "./images_gl/PCIe/90X23.png");
-    $("#hotspot6plus.plus").attr("src", "./images_gl/PCIe/2X110.png");
+    $("#hotspot6plus.plus").attr("src", "./images_gl/PCIe/90X23.png");
     $("#hotspot7plus.plus").attr("src", "./images_gl/PCIe/2X110.png");
     $("#hotspot8plus.plus").attr("src", "./images_gl/PCIe/23X137.png");
     $("#hotspot9plus.plus").attr("src", "./images_gl/NVMe/23_60.png");
@@ -995,10 +992,11 @@ function UiLoader() {
     $("#point111_server_img2 img").attr("src","./images_gl/server/rear.png");
 
     imgPreLoader();
-    loadScreens();
-    var img = new Image();
-    img.onload = function () {
+	var img = new Image();
+      img.onload = function(){
     }
+
+    loadScreens();
 }
 
 function menuFading() {
@@ -1007,7 +1005,7 @@ function menuFading() {
 function onSuperBlazeReady() {
     scene._jitRadius = 3;
     scene._zNearMin = 5.0;
-    if (mob) scene._bDoF = false;
+    // if (mob) scene._bDoF = false;
     window.addEventListener('focus', onWindowFocus, false);
     window.addEventListener('blur', onWindowBlur, false);
 
@@ -1560,6 +1558,7 @@ function menu4Click() {
     }, 2600));
 
     top_cover = false;
+    
     scene.clearRefine();
 
 }
@@ -1600,6 +1599,8 @@ function menu5Click() {
     }, 2000));
     scene.clearRefine();
 }
+var ScreenAnimInterval2;
+var animCounter2 = 0;
 
 function menu6Click() {
     console.log("menu6Clicked");
@@ -1626,12 +1627,12 @@ function menu6Click() {
     scene.groupApplyState('Server_show_new');
     scene.groupApplyState('Remote_only_off');
     scene.groupApplyState('Front_Panel_C_Net_HDD');
-    scene.gotoPosInTime(0.4126661705418002, 0.25492599775761343, 2.357616790500371, -3.490444065753773, 71.9715567005837, 2000, function () {
+    scene.gotoPosInTime(0.4126661705418002, 0.25492599775761343, 2.357616790500371, -3.490444065753773, 71.9715567005837, 1500, function () {
         $("#point16text").css('display', 'block');
         $("#point16text1").show();
         scene.groupApplyState("3.5_inch_Drive_Configuation")
-        scene.animPlayInTime("STATUS_DASHBOARD", 0.4580000, 1500);
-        scene.animPlayInTime("Net_Screen", 0.8330000, 1500);
+        scene.animPlayInTime("STATUS_DASHBOARD", 0.4580000, 1200);
+        scene.animPlayInTime("Net_Screen", 0.8330000, 1200);
     });
     timeouts.push(setTimeout(function () {
         animComplete();
@@ -1642,8 +1643,7 @@ function menu6Click() {
     scene.clearRefine();
 }
 
-var ScreenAnimInterval2;
-var animCounter2 = 0;
+
 
 function menu16Click() {
     console.log("menu_16_clicked");
@@ -1844,29 +1844,43 @@ function menu9Click() {
     objectHide();
     scene.groupApplyState('Front_Panel_A_Horizontal_HDD');
     scene.groupApplyState('INTERNAL_ON');
-    scene.groupApplyState('Top_Cover_OFF');
+    // scene.groupApplyState('Top_Cover_OFF');
     scene.groupApplyState('3.5_inch_Drive_Configuation');
     scene.groupApplyState('Extra_part_OFF');
 
     scene.gotoPosInTime(5.562946856604739,0.4531939058193576,-1.7956863385817967,4.393360640626445,210, 1000, function () {
-        topCover = true;
+        // topCover = true;
 
-        scene.animPlayInTime("NVME_back", 0.83, 1000);
-        scene.animPlayInTime("Handel_metal", 0.83, 1000);
-        timeouts.push(setTimeout(function () {
-            $("#point12text").css('display', 'block');
-            $(".cur").css('display', 'block');
-            translateIn(12);
-            animComplete();
-        }, 700));
+        // scene.animPlayInTime("NVME_back", 0.83, 1000);
+        // scene.animPlayInTime("Handel_metal", 0.83, 1000);
+        // timeouts.push(setTimeout(function () {
+        //     $("#point12text").css('display', 'block');
+        //     $(".cur").css('display', 'block');
+        //     translateIn(12);
+        //     animComplete();
+        // }, 700));
+        scene.animPlayInTime("Chassi_Top",1,1000,function () {
+            scene.groupApplyState('Top_Cover_OFF');
 
-    });
+            scene.groupApplyState('MB_ON');
+            scene.groupApplyState('Front_Panel_A_Horizontal_HDD');
+            scene.groupApplyState('3.5_inch');         
 
+            scene.animPlayInTime("NVME_back",5,1000);
+            scene.animPlayInTime("Handel_metal",0.83,500,function () {
+               $("#point12text").css('display','block');
+               $(".cur").css('display', 'block');
+               translateIn(12);
+            });
+         });
+      });
+      
     timeouts.push(setTimeout(function () {
         if (autoplayAnim) {
             animCompeteAuto();
-        }
-
+         } else {
+            animComplete();
+         }
     }, 2500));
     scene.clearRefine();
 }
@@ -2316,26 +2330,40 @@ function menu14Click() {
     $("#menu14 .greyOutBox").addClass('redOutBox');
     objectHide();
     scene.groupApplyState('Front_Panel_B_Vertical_HDD');
-    scene.groupApplyState('Top_Cover_OFF');
+    // scene.groupApplyState('Top_Cover_OFF');
     scene.groupApplyState('Internal_ON');
-    scene.groupApplyState('2.5_inch');
+    // scene.groupApplyState('2.5_inch');
     scene.groupApplyState('Storage_Rich_Configuation');
     scene.groupApplyState('Extra_part_OFF');
     scene.gotoPosInTime(5.296261619604739, 0.8977462258193575, 0.7956863385817967, -3.393360640626445, 205, 1000, function () {
-        scene.animPlayInTime("NVME_back", 0.83, 1000);
-        scene.animPlayInTime("Handel_metal", 0.83, 1000);
-        timeouts.push(setTimeout(function () {
-            $("#point14text").fadeIn(400);
-            translateIn(14);
-        }, 700));
+        // scene.animPlayInTime("NVME_back", 0.83, 1000);
+        // scene.animPlayInTime("Handel_metal", 0.83, 1000);
+        // timeouts.push(setTimeout(function () {
+        //     $("#point14text").fadeIn(400);
+        //     translateIn(14);
+        // }, 700));
     });
-    animComplete();
     timeouts.push(setTimeout(function () {
-        if (autoplayAnim) {
-            animCompeteAuto();
-        }
 
-    }, 3000));
+        scene.animPlayInTime("Chassi_Top",1,1000,function () {
+           scene.groupApplyState('2.5_inch');
+           scene.groupApplyState('Top_Cover_OFF');
+           scene.animPlayInTime("HDD_CAGE_SR655",0.83,1000);
+           scene.animPlayInTime("NVME_back",0.83,1000);
+           scene.animPlayInTime("Handel_metal",0.83,1000);
+        });
+        scene.clearRefine();
+     },1300));
+
+    timeouts.push(setTimeout(function () {
+        $("#point14text").fadeIn(400);
+        translateIn(14);
+        if (autoplayAnim) {
+           animCompeteAuto();
+        } else {
+           animComplete();
+        }
+     },2500));
     scene.clearRefine();
 }
 
@@ -2886,7 +2914,7 @@ function autoRotateRequest(ev) {
     yStarted = true;
     yPos += 0.5;
     var mpos = [0.0, 0.0];
-    var mdelta = [0.100, 0.0];
+    var mdelta = [0.90, 0.0];
     if (s._nav.NavRotation(mpos, mdelta)) {
         scene.clearRefine();
     }

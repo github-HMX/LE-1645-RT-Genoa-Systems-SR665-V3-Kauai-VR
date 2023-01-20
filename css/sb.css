@@ -1290,11 +1290,11 @@ font-size:20px;
 }
 
 #hotspot6plus {
-    top: 728px;
-    left: 897px;
+    top: 766px;
+    left: 838px;
     position: absolute;
-    height: 94px;
-    transform: rotate(211deg);
+    height: 30px;
+    transform: rotate(131deg);
 }
 
 #hotspot7 {
@@ -2201,7 +2201,7 @@ font-size:20px;
 
 #hot40 {
     position: absolute;
-    top: -307px;
+    top: -331px;
     left: -341px;
     width: 592px;
     /* text-align: center; */
@@ -2210,7 +2210,7 @@ font-size:20px;
 
 #hotspot40plus {
     position: absolute;
-    top: -212px;
+    top: -239px;
     left: -324px;
     width: 500px;
     /* transform: rotate(0deg); */
@@ -2271,10 +2271,10 @@ font-size:20px;
 }
 #hotspot312plus {
     position: absolute;
-    top: 629px;
-    left: 710px;
-    transform: rotate(-175deg);
-    height: 148px;
+    top: 622px;
+    left: 699px;
+    transform: rotate(-159deg);
+    height: 176px;
 }
 #hotspot313 {
     position: absolute;
