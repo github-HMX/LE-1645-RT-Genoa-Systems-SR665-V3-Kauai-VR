@@ -1876,11 +1876,12 @@ function menu9Click() {
       });
       
     timeouts.push(setTimeout(function () {
+        timeouts.push(setTimeout(function () {
+            animComplete();
+        }, 200));
         if (autoplayAnim) {
             animCompeteAuto();
-         } else {
-            animComplete();
-         }
+         } 
     }, 2500));
     scene.clearRefine();
 }
@@ -2340,7 +2341,7 @@ function menu14Click() {
         // scene.animPlayInTime("Handel_metal", 0.83, 1000);
         // timeouts.push(setTimeout(function () {
         //     $("#point14text").fadeIn(400);
-        //     translateIn(14);
+            // translateIn(14);
         // }, 700));
     });
     timeouts.push(setTimeout(function () {
@@ -2358,11 +2359,12 @@ function menu14Click() {
     timeouts.push(setTimeout(function () {
         $("#point14text").fadeIn(400);
         translateIn(14);
+        timeouts.push(setTimeout(function () {
+            animComplete();
+        }, 200));
         if (autoplayAnim) {
            animCompeteAuto();
-        } else {
-           animComplete();
-        }
+        } 
      },2500));
     scene.clearRefine();
 }
@@ -2422,13 +2424,14 @@ function menu18Click() {
         $("#point18text").css('display', 'block');
     });
     timeouts.push(setTimeout(function () {
-        animComplete();
-
+        timeouts.push(setTimeout(function () {
+            animComplete();
+        }, 200));
         if (autoplayAnim) {
             animCompeteAuto();
         }
-
     }, 2000));
+    
 }
 
 function menu20Click() {
