@@ -88,7 +88,7 @@ function showScene() {
     $("#lenovo_logo").css("display", "block");
     $("#ButtonController").css("opacity", "1");
     startAutorot = setTimeout(function () {
-        // autoRotateCall();
+        autoRotateCall();
         // console.log("autoRotateCall");
     }, 4000);
     setTimeout(function () {

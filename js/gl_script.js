@@ -1435,7 +1435,7 @@ function menu2Click() {
 
     scene.gotoPosInTime(0.310710362172653, 0.09103607346410204, -2.384132972905103, -1.070085900494059, 170, 1000);
     startAutorot = timeouts.push(setTimeout(function () {
-        // autoRotateCall();
+        autoRotateCall();
         console.log("autoRotateCall");
     }, 2100));
 
